@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.7 on win32)" generated="2026-09-27T20:51:51.270800" rpa="false" schemaversion="5">
+<suite id="s1" name="Googlesearch Browserlibrary" source="C:\Users\PAWAN\PythonProject\Tests\Google\Functional_Suite\Googlesearch_Browserlibrary.robot">
+<test id="s1-t1" name="First Test Case" line="13">
+<kw name="Open Browser" owner="Keyword">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-09-27T20:51:51.525710" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\PythonProject\\Tests\\Google\\Functional_Suite\\browser\\traces\\temp\\2571b5ee-f872-47b1-bd71-d3768b70234e"}</msg>
+<msg time="2026-09-27T20:51:51.550193" level="INFO">Starting Browser process C:\Users\PAWAN\PythonProject\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:59735</msg>
+<msg time="2026-09-27T20:51:52.251804" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\PythonProject\\Tests\\Google\\Functional_Suite\\browser\\traces\\temp\\2571b5ee-f872-47b1-bd71-d3768b70234e"}</msg>
+<arg>${USER}[browser]</arg>
+<arg>${USER}[headless]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-09-27T20:51:51.524703" elapsed="0.727101"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-09-27T20:51:52.253805" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-09-27T20:51:52.268806" level="INFO">Successfully created context. </msg>
+<msg time="2026-09-27T20:51:52.269805" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-09-27T20:51:52.252808" elapsed="0.016997"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-09-27T20:51:57.338678" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-09-27T20:51:57.338678" level="INFO">See also file:///C:/Users/PAWAN/PythonProject/Tests/Google/Functional_Suite/playwright-log.txt for additional details.</msg>
+<msg time="2026-09-27T20:51:57.339679" level="FAIL">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://demowebshop.tricentis.com/", waiting until "load"
+</msg>
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="FAIL" start="2026-09-27T20:51:52.269805" elapsed="5.073871">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://demowebshop.tricentis.com/", waiting until "load"
+</status>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>${Login_Xpath}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-09-27T20:51:57.343676" elapsed="0.001002"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="NOT RUN" start="2026-09-27T20:51:57.344678" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-09-27T20:51:51.524703" elapsed="5.819975">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://demowebshop.tricentis.com/", waiting until "load"
+</status>
+</kw>
+<kw name="Enter Username" owner="Keyword">
+<status status="NOT RUN" start="2026-09-27T20:51:57.345680" elapsed="0.000000"/>
+</kw>
+<kw name="Enter Password" owner="Keyword">
+<status status="NOT RUN" start="2026-09-27T20:51:57.346679" elapsed="0.000000"/>
+</kw>
+<kw name="Enter login" owner="Keyword">
+<status status="NOT RUN" start="2026-09-27T20:51:57.347678" elapsed="0.000000"/>
+</kw>
+<kw name="Taking screenshot" owner="Keyword">
+<status status="NOT RUN" start="2026-09-27T20:51:57.347678" elapsed="0.000000"/>
+</kw>
+<msg time="2026-09-27T20:51:57.371682" level="INFO">Switching context to context=5b909542-f224-4d6d-bc1d-810aaf6bf541 in CURRENT</msg>
+<msg time="2026-09-27T20:51:57.381682" level="INFO">Successfully changed active context: context=5b909542-f224-4d6d-bc1d-810aaf6bf541</msg>
+<msg time="2026-09-27T20:51:57.397753" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2026-09-27T20:51:51.523703" elapsed="5.824975">Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://demowebshop.tricentis.com/", waiting until "load"
+</status>
+</test>
+<status status="FAIL" start="2026-09-27T20:51:51.270800" elapsed="6.128954"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Googlesearch Browserlibrary" id="s1" pass="0" fail="1" skip="0">Googlesearch Browserlibrary</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.7 on win32)" generated="2026-09-27T21:00:40.707539" rpa="false" schemaversion="5">
+<suite id="s1" name="PythonProject" source="C:\Users\PAWAN\PythonProject">
+<suite id="s1-s1" name="Tests" source="C:\Users\PAWAN\PythonProject\Tests">
+<suite id="s1-s1-s1" name="Google" source="C:\Users\PAWAN\PythonProject\Tests\Google">
+<suite id="s1-s1-s1-s1" name="Functional Suite" source="C:\Users\PAWAN\PythonProject\Tests\Google\Functional_Suite">
+<suite id="s1-s1-s1-s1-s1" name="Browser" source="C:\Users\PAWAN\PythonProject\Tests\Google\Functional_Suite\browser">
+<suite id="s1-s1-s1-s1-s1-s1" name="Practise" source="C:\Users\PAWAN\PythonProject\Tests\Google\Functional_Suite\browser\practise.robot">
+<test id="s1-s1-s1-s1-s1-s1-t1" name="Example Test" line="10">
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="${mobilephone} == 'samsung'">
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${mobilephone}=='samsung'</arg>
+<doc>Stops executing the enclosing loop if the `condition` is true.</doc>
+<status status="NOT RUN" start="2026-09-27T21:00:40.753530" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>values are : ${mobilephone}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-09-27T21:00:40.754531" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>values are : ${mobilephone}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-09-27T21:00:40.754531" elapsed="0.000000"/>
+</kw>
+<msg time="2026-09-27T21:00:40.754531" level="FAIL">Invalid IF condition: Evaluating expression "apple nokia == 'samsung'" failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)
+
+Variables in the original expression "${mobilephone} == 'samsung'" were resolved before the expression was evaluated. Try using "$mobilephone == 'samsung'" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</msg>
+<status status="FAIL" start="2026-09-27T21:00:40.753530" elapsed="0.002001">Invalid IF condition: Evaluating expression "apple nokia == 'samsung'" failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)
+
+Variables in the original expression "${mobilephone} == 'samsung'" were resolved before the expression was evaluated. Try using "$mobilephone == 'samsung'" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</status>
+</branch>
+<status status="FAIL" start="2026-09-27T21:00:40.753530" elapsed="0.002001">Invalid IF condition: Evaluating expression "apple nokia == 'samsung'" failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)
+
+Variables in the original expression "${mobilephone} == 'samsung'" were resolved before the expression was evaluated. Try using "$mobilephone == 'samsung'" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</status>
+</if>
+<var name="${mobilephone}">apple nokia</var>
+<status status="FAIL" start="2026-09-27T21:00:40.753530" elapsed="0.002001">Invalid IF condition: Evaluating expression "apple nokia == 'samsung'" failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)
+
+Variables in the original expression "${mobilephone} == 'samsung'" were resolved before the expression was evaluated. Try using "$mobilephone == 'samsung'" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</status>
+</iter>
+<var>${mobilephone}</var>
+<value>@{mobilephones}</value>
+<status status="FAIL" start="2026-09-27T21:00:40.752530" elapsed="0.003001">Invalid IF condition: Evaluating expression "apple nokia == 'samsung'" failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)
+
+Variables in the original expression "${mobilephone} == 'samsung'" were resolved before the expression was evaluated. Try using "$mobilephone == 'samsung'" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</status>
+</for>
+<status status="FAIL" start="2026-09-27T21:00:40.751530" elapsed="0.004001">Invalid IF condition: Evaluating expression "apple nokia == 'samsung'" failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)
+
+Variables in the original expression "${mobilephone} == 'samsung'" were resolved before the expression was evaluated. Try using "$mobilephone == 'samsung'" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</status>
+</test>
+<status status="FAIL" start="2026-09-27T21:00:40.738531" elapsed="0.017999"/>
+</suite>
+<status status="FAIL" start="2026-09-27T21:00:40.736530" elapsed="0.021002"/>
+</suite>
+<status status="FAIL" start="2026-09-27T21:00:40.735531" elapsed="0.023000"/>
+</suite>
+<status status="FAIL" start="2026-09-27T21:00:40.733530" elapsed="0.026001"/>
+</suite>
+<status status="FAIL" start="2026-09-27T21:00:40.731531" elapsed="0.029002"/>
+</suite>
+<status status="FAIL" start="2026-09-27T21:00:40.711531" elapsed="0.050000"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="PythonProject" id="s1" pass="0" fail="1" skip="0">PythonProject</stat>
+<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">PythonProject.Tests</stat>
+<stat name="Google" id="s1-s1-s1" pass="0" fail="1" skip="0">PythonProject.Tests.Google</stat>
+<stat name="Functional Suite" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">PythonProject.Tests.Google.Functional Suite</stat>
+<stat name="Browser" id="s1-s1-s1-s1-s1" pass="0" fail="1" skip="0">PythonProject.Tests.Google.Functional Suite.Browser</stat>
+<stat name="Practise" id="s1-s1-s1-s1-s1-s1" pass="0" fail="1" skip="0">PythonProject.Tests.Google.Functional Suite.Browser.Practise</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

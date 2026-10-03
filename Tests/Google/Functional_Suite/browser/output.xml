@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.7 on win32)" generated="2026-10-02T19:02:27.307353" rpa="false" schemaversion="5">
+<suite id="s1" name="Practise" source="C:\Users\PAWAN\PythonProject\Tests\Google\Functional_Suite\browser\practise.robot">
+<test id="s1-t1" name="Example Test" line="10">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-02T19:02:27.363385" level="INFO">values are : apple nokia</msg>
+<arg>values are : ${mobilephone}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-02T19:02:27.362383" elapsed="0.001002"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>values are : ${mobilephone}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-02T19:02:27.363385" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${mobilephone}' == 'samsung'">
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${mobilephone}'=='samsung'</arg>
+<doc>Stops executing the enclosing loop if the `condition` is true.</doc>
+<status status="NOT RUN" start="2026-10-02T19:02:27.363385" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-10-02T19:02:27.363385" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-10-02T19:02:27.363385" elapsed="0.000000"/>
+</if>
+<var name="${mobilephone}">apple nokia</var>
+<status status="PASS" start="2026-10-02T19:02:27.362383" elapsed="0.002001"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-02T19:02:27.364384" level="INFO">values are : samsung</msg>
+<arg>values are : ${mobilephone}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-02T19:02:27.364384" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>values are : ${mobilephone}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-10-02T19:02:27.364384" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${mobilephone}' == 'samsung'">
+<kw name="Exit For Loop If" owner="BuiltIn">
+<msg time="2026-10-02T19:02:27.365400" level="INFO">Exiting for loop altogether.</msg>
+<arg>'${mobilephone}'=='samsung'</arg>
+<doc>Stops executing the enclosing loop if the `condition` is true.</doc>
+<status status="PASS" start="2026-10-02T19:02:27.365400" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-10-02T19:02:27.365400" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-10-02T19:02:27.364384" elapsed="0.002001"/>
+</if>
+<var name="${mobilephone}">samsung</var>
+<status status="PASS" start="2026-10-02T19:02:27.364384" elapsed="0.002001"/>
+</iter>
+<var>${mobilephone}</var>
+<value>@{mobilephones}</value>
+<status status="PASS" start="2026-10-02T19:02:27.361380" elapsed="0.005005"/>
+</for>
+<status status="PASS" start="2026-10-02T19:02:27.361380" elapsed="0.005005"/>
+</test>
+<status status="PASS" start="2026-10-02T19:02:27.311352" elapsed="0.056032"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Practise" id="s1" pass="1" fail="0" skip="0">Practise</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
