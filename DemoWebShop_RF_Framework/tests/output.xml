@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.7 on win32)" generated="2026-09-27T19:11:02.701189" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test Suite" source="C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\login_test_suite.robot">
+<kw name="Open Browser To Application" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:11:03.172534" level="FAIL">Variable '${BASE_URL}' not found.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-09-27T19:11:03.172534" elapsed="0.000000">Variable '${BASE_URL}' not found.</status>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-09-27T19:11:03.172534" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-09-27T19:11:03.172534" elapsed="0.000000"/>
+</kw>
+<doc>Suite-level browser bring-up, run once before all test cases.</doc>
+<status status="FAIL" start="2026-09-27T19:11:03.171533" elapsed="0.001001">Variable '${BASE_URL}' not found.</status>
+</kw>
+<test id="s1-t1" name="TC01 - Login Page Loads With All Required Elements" line="25">
+<doc>Verifies the Login page renders with the fields and controls
+a user needs: Email, Password, Log in button, Register link.</doc>
+<tag>login</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="FAIL" start="2026-09-27T19:11:03.172534" elapsed="0.001000">Parent suite setup failed:
+Variable '${BASE_URL}' not found.</status>
+</test>
+<test id="s1-t2" name="TC02 - Register A New Customer For Login Testing" line="35">
+<doc>Setup test: creates a brand-new, uniquely-emailed account.
+The generated email is stored as a suite variable and reused
+by TC03. Ends by logging out so TC03 performs a real login.</doc>
+<tag>registration</tag>
+<tag>setup</tag>
+<status status="FAIL" start="2026-09-27T19:11:03.174534" elapsed="0.010002">Parent suite setup failed:
+Variable '${BASE_URL}' not found.</status>
+</test>
+<test id="s1-t3" name="TC03 - Successful Login With Valid Registered Credentials" line="44">
+<doc>Logs in using the account created in TC02 and verifies the
+header switches to a logged-in state ("Log out" link visible).</doc>
+<tag>login</tag>
+<tag>positive</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-09-27T19:11:03.185533" elapsed="0.001006">Parent suite setup failed:
+Variable '${BASE_URL}' not found.</status>
+</test>
+<test id="s1-t4" name="TC04 - Login Fails With Incorrect Password" line="53">
+<doc>Attempts to log in with a valid-format email but a wrong
+password and verifies the correct validation error appears.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="FAIL" start="2026-09-27T19:11:03.186539" elapsed="0.000000">Parent suite setup failed:
+Variable '${BASE_URL}' not found.</status>
+</test>
+<test id="s1-t5" name="TC05 - Login Fails With Empty Email And Password" line="60">
+<doc>Submits the login form with both fields blank and verifies
+the form does not proceed and shows a validation message.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2026-09-27T19:11:03.187534" elapsed="0.000000">Parent suite setup failed:
+Variable '${BASE_URL}' not found.</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-09-27T19:11:03.188538" elapsed="0.000000"/>
+</kw>
+<doc>Test suite covering the Login page of DemoWebShop
+(https://demowebshop.tricentis.com/login).
+
+Design: strict L1 (element) / L2 (business) / L3 (test case) layering.
+Test cases below call ONLY L2/L1 keywords - never a raw SeleniumLibrary
+keyword or a hardcoded locator - keeping this file readable as
+plain-English business steps.
+
+Test Case 02 registers a fresh account so Test Case 03 has a
+guaranteed-valid login (DemoWebShop requires a registered account;
+there is no fixed set of valid demo credentials).</doc>
+<status status="FAIL" start="2026-09-27T19:11:02.704187" elapsed="0.484351">Suite setup failed:
+Variable '${BASE_URL}' not found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="4" skip="0">login</stat>
+<stat pass="0" fail="2" skip="0">negative</stat>
+<stat pass="0" fail="1" skip="0">positive</stat>
+<stat pass="0" fail="1" skip="0">registration</stat>
+<stat pass="0" fail="1" skip="0">setup</stat>
+<stat pass="0" fail="2" skip="0">smoke</stat>
+<stat pass="0" fail="1" skip="0">ui</stat>
+<stat pass="0" fail="1" skip="0">validation</stat>
+</tag>
+<suite>
+<stat name="Login Test Suite" id="s1" pass="0" fail="5" skip="0">Login Test Suite</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-09-27T19:11:02.758210" level="ERROR">Error in file 'C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\login_test_suite.robot' on line 13: Resource file 'C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\resources\keywords\L1_element_keywords\login_page_keywords.resource' does not exist.</msg>
+<msg time="2026-09-27T19:11:02.759306" level="ERROR">Error in file 'C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\login_test_suite.robot' on line 14: Resource file 'C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\resources\keywords\L2_business_keywords\account_business_keywords.resource' does not exist.</msg>
+<msg time="2026-09-27T19:11:02.759306" level="ERROR">Error in file 'C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\login_test_suite.robot' on line 15: Resource file 'C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\variables\global_variables.resource' does not exist.</msg>
+</errors>
+</robot>

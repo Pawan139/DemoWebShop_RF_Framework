@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.7 on win32)" generated="2026-09-27T19:13:31.707643" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test Suite" source="C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\login_test_suite.robot">
+<kw name="Open Browser To Application" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:13:32.123140" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-27T19:13:32.123140" elapsed="77.291986"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-27T19:14:49.415126" elapsed="0.001563"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-09-27T19:14:49.416689" elapsed="0.041378"/>
+</kw>
+<doc>Suite-level browser bring-up, run once before all test cases.</doc>
+<status status="PASS" start="2026-09-27T19:13:32.122145" elapsed="77.336630"/>
+</kw>
+<test id="s1-t1" name="TC01 - Login Page Loads With All Required Elements" line="25">
+<kw name="Open Login Page" owner="login_page_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:49.458775" level="INFO">Opening url 'https://demowebshop.tricentis.com/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-09-27T19:14:49.458775" elapsed="0.475469"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:49.934244" elapsed="0.094048"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:50.181676" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_open_login_page.png"&gt;&lt;img src="screenshots/1_open_login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.029041" elapsed="0.152635"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.029041" elapsed="0.152635"/>
+</kw>
+<arg>open_login_page</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.029041" elapsed="0.152635"/>
+</kw>
+<doc>Navigates directly to the Login page URL.</doc>
+<status status="PASS" start="2026-09-27T19:14:49.458775" elapsed="0.724843"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:50.206719" level="INFO">Element 'id:Email' is displayed.</msg>
+<arg>id:Email</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.183618" elapsed="0.023101"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:50.231425" level="INFO">Element 'id:Password' is displayed.</msg>
+<arg>id:Password</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.211302" elapsed="0.020123"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:50.248082" level="INFO">Element 'css:input.button-1.login-button' is displayed.</msg>
+<arg>css:input.button-1.login-button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.231425" elapsed="0.016657"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:50.259584" level="INFO">Element 'css:a.ico-register' is displayed.</msg>
+<arg>css:a.ico-register</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.248082" elapsed="0.011502"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<arg>Capture Page Screenshot Step</arg>
+<arg>TEST_FAILURE</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.265176" elapsed="0.000000"/>
+</kw>
+<doc>Verifies the Login page renders with the fields and controls
+a user needs: Email, Password, Log in button, Register link.</doc>
+<tag>login</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" start="2026-09-27T19:14:49.458775" elapsed="0.808421"/>
+</test>
+<test id="s1-t2" name="TC02 - Register A New Customer For Login Testing" line="35">
+<kw name="Register A New Customer And Return Credentials" owner="account_business_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2026-09-27T19:14:50.267196" level="INFO">${random_string} = osigzfdz</msg>
+<var>${random_string}</var>
+<arg>8</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired `length` from the given `chars`.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.267196" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-09-27T19:14:50.267196" level="INFO">${unique_email} = pawan.qa.osigzfdz@example.com</msg>
+<var>${unique_email}</var>
+<arg>pawan.qa.${random_string}@example.com</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.267196" elapsed="0.000000"/>
+</kw>
+<kw name="Open Registration Page" owner="registration_page_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:50.267196" level="INFO">Opening url 'https://demowebshop.tricentis.com/register'</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.267196" elapsed="0.493887"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REG_FIRST_NAME_FIELD}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.761083" elapsed="0.021362"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:50.915493" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_open_registration_page.png"&gt;&lt;img src="screenshots/1_open_registration_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.782445" elapsed="0.133048"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.782445" elapsed="0.133048"/>
+</kw>
+<arg>open_registration_page</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.782445" elapsed="0.133048"/>
+</kw>
+<doc>Navigates directly to the Registration page URL.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.267196" elapsed="0.648297"/>
+</kw>
+<kw name="Select Gender" owner="registration_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:50.915493" level="INFO">Clicking element 'id:gender-male'.</msg>
+<arg>${GENDER_MALE_RADIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.915493" elapsed="0.079314"/>
+</kw>
+<arg>'${gender}' == 'Male'</arg>
+<arg>Click Element</arg>
+<arg>${GENDER_MALE_RADIO}</arg>
+<arg>ELSE</arg>
+<arg>Click Element</arg>
+<arg>${GENDER_FEMALE_RADIO}</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.915493" elapsed="0.079314"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:51.118215" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_select_gender.png"&gt;&lt;img src="screenshots/1_select_gender.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.994807" elapsed="0.123408"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.994807" elapsed="0.123408"/>
+</kw>
+<arg>select_gender</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.994807" elapsed="0.123408"/>
+</kw>
+<arg>${GENDER}</arg>
+<doc>Selects the Male or Female radio button.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.915493" elapsed="0.202722"/>
+</kw>
+<kw name="Enter First Name" owner="registration_page_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:51.120240" level="INFO">Typing text 'Pawan' into text field 'id:FirstName'.</msg>
+<arg>${REG_FIRST_NAME_FIELD}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.120240" elapsed="0.096440"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:51.322996" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_enter_first_name.png"&gt;&lt;img src="screenshots/1_enter_first_name.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.216680" elapsed="0.106316"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.216680" elapsed="0.106316"/>
+</kw>
+<arg>enter_first_name</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.216680" elapsed="0.106316"/>
+</kw>
+<arg>${FIRST_NAME}</arg>
+<status status="PASS" start="2026-09-27T19:14:51.118215" elapsed="0.204781"/>
+</kw>
+<kw name="Enter Last Name" owner="registration_page_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:51.332023" level="INFO">Typing text 'QA' into text field 'id:LastName'.</msg>
+<arg>${REG_LAST_NAME_FIELD}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.332023" elapsed="0.074224"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:51.515384" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_enter_last_name.png"&gt;&lt;img src="screenshots/1_enter_last_name.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.411410" elapsed="0.103974"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.409393" elapsed="0.105991"/>
+</kw>
+<arg>enter_last_name</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.409393" elapsed="0.105991"/>
+</kw>
+<arg>${LAST_NAME}</arg>
+<status status="PASS" start="2026-09-27T19:14:51.331375" elapsed="0.184009"/>
+</kw>
+<kw name="Enter Registration Email" owner="registration_page_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:51.515384" level="INFO">Typing text 'pawan.qa.osigzfdz@example.com' into text field 'id:Email'.</msg>
+<arg>${REG_EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.515384" elapsed="0.094676"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:51.722998" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_enter_registration_email.png"&gt;&lt;img src="screenshots/1_enter_registration_email.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.613248" elapsed="0.109750"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.611597" elapsed="0.111401"/>
+</kw>
+<arg>enter_registration_email</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.610060" elapsed="0.120377"/>
+</kw>
+<arg>${unique_email}</arg>
+<status status="PASS" start="2026-09-27T19:14:51.515384" elapsed="0.215053"/>
+</kw>
+<kw name="Enter Registration Password" owner="registration_page_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:51.730437" level="INFO">Typing text 'Test@12345' into text field 'id:Password'.</msg>
+<arg>${REG_PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.730437" elapsed="0.084973"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:51.931416" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_enter_registration_password.png"&gt;&lt;img src="screenshots/1_enter_registration_password.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.816137" elapsed="0.115279"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.816137" elapsed="0.115279"/>
+</kw>
+<arg>enter_registration_password</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.815410" elapsed="0.116006"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2026-09-27T19:14:51.730437" elapsed="0.200979"/>
+</kw>
+<kw name="Enter Registration Confirm Password" owner="registration_page_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:51.931416" level="INFO">Typing text 'Test@12345' into text field 'id:ConfirmPassword'.</msg>
+<arg>${REG_CONFIRM_PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:51.931416" elapsed="0.079368"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:52.130550" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_enter_registration_confirm_password.png"&gt;&lt;img src="screenshots/1_enter_registration_confirm_password.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:52.012801" elapsed="0.117749"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:52.012801" elapsed="0.117749"/>
+</kw>
+<arg>enter_registration_confirm_password</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:52.010784" elapsed="0.119766"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2026-09-27T19:14:51.931416" elapsed="0.199134"/>
+</kw>
+<kw name="Click Register Button" owner="registration_page_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:52.130550" level="INFO">Clicking element 'id:register-button'.</msg>
+<arg>${REG_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:52.130550" elapsed="1.323224"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REG_SUCCESS_MESSAGE}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.453774" elapsed="0.010570"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:53.588826" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_click_register_button.png"&gt;&lt;img src="screenshots/1_click_register_button.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.472570" elapsed="0.116256"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.472570" elapsed="0.116256"/>
+</kw>
+<arg>click_register_button</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.472570" elapsed="0.116256"/>
+</kw>
+<doc>Submits the registration form.</doc>
+<status status="PASS" start="2026-09-27T19:14:52.130550" elapsed="1.458276"/>
+</kw>
+<kw name="Get Registration Success Text" owner="registration_page_keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:53.614706" level="INFO">${text} = Your registration completed</msg>
+<var>${text}</var>
+<arg>${REG_SUCCESS_MESSAGE}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.588826" elapsed="0.025880"/>
+</kw>
+<return>
+<value>${text}</value>
+<status status="PASS" start="2026-09-27T19:14:53.614706" elapsed="0.000000"/>
+</return>
+<msg time="2026-09-27T19:14:53.614706" level="INFO">${confirmation} = Your registration completed</msg>
+<var>${confirmation}</var>
+<status status="PASS" start="2026-09-27T19:14:53.588826" elapsed="0.025880"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${confirmation}</arg>
+<arg>Your registration completed</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.614706" elapsed="0.002298"/>
+</kw>
+<return>
+<value>${unique_email}</value>
+<status status="PASS" start="2026-09-27T19:14:53.617004" elapsed="0.000000"/>
+</return>
+<msg time="2026-09-27T19:14:53.617004" level="INFO">${email} = pawan.qa.osigzfdz@example.com</msg>
+<var>${email}</var>
+<doc>Registers a brand-new, uniquely-emailed customer on DemoWebShop
+so later tests have a guaranteed-valid login account.
+Returns the generated email so it can be reused by login tests.</doc>
+<status status="PASS" start="2026-09-27T19:14:50.267196" elapsed="3.349808"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-09-27T19:14:53.617004" level="INFO">${REGISTERED_EMAIL} = pawan.qa.osigzfdz@example.com</msg>
+<arg>${REGISTERED_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Makes the variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.617004" elapsed="0.000000"/>
+</kw>
+<kw name="Logout Current User" owner="account_business_keywords">
+<kw name="Is Logout Link Visible" owner="login_page_keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HEADER_LOGOUT_LINK}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.617004" elapsed="0.015549"/>
+</kw>
+<msg time="2026-09-27T19:14:53.632553" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${HEADER_LOGOUT_LINK}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.617004" elapsed="0.015549"/>
+</kw>
+<return>
+<value>${visible}</value>
+<status status="PASS" start="2026-09-27T19:14:53.632553" elapsed="0.000000"/>
+</return>
+<msg time="2026-09-27T19:14:53.632553" level="INFO">${logged_in} = True</msg>
+<var>${logged_in}</var>
+<doc>Returns True/False for whether the header shows the logged-in "Log out" link.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.617004" elapsed="0.015549"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Header Logout Link" owner="login_page_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HEADER_LOGOUT_LINK}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.643470" elapsed="0.017999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:53.664814" level="INFO">Clicking element 'css:a.ico-logout'.</msg>
+<arg>${HEADER_LOGOUT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.664814" elapsed="0.911606"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:54.758391" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_click_logout_link.png"&gt;&lt;img src="screenshots/1_click_logout_link.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:54.576420" elapsed="0.181971"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:54.576420" elapsed="0.181971"/>
+</kw>
+<arg>click_logout_link</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:54.576420" elapsed="0.181971"/>
+</kw>
+<doc>Clicks "Log out" in the page header.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.643470" elapsed="1.114921"/>
+</kw>
+<arg>${logged_in}</arg>
+<arg>Click Header Logout Link</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.632553" elapsed="1.125838"/>
+</kw>
+<doc>Logs the current session out, used to reset state between tests.</doc>
+<status status="PASS" start="2026-09-27T19:14:53.617004" elapsed="1.141387"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<arg>Capture Page Screenshot Step</arg>
+<arg>TEST_FAILURE</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-09-27T19:14:54.758391" elapsed="0.000000"/>
+</kw>
+<doc>Setup test: creates a brand-new, uniquely-emailed account.
+The generated email is stored as a suite variable and reused
+by TC03. Ends by logging out so TC03 performs a real login.</doc>
+<tag>registration</tag>
+<tag>setup</tag>
+<status status="PASS" start="2026-09-27T19:14:50.267196" elapsed="4.491195"/>
+</test>
+<test id="s1-t3" name="TC03 - Successful Login With Valid Registered Credentials" line="44">
+<kw name="Skip If" owner="BuiltIn">
+<arg>'${REGISTERED_EMAIL}' == '${EMPTY}'</arg>
+<arg>msg=TC02 must run first to create a valid account.</arg>
+<doc>Conditionally stops the current test or task and sets its status to SKIP.</doc>
+<status status="PASS" start="2026-09-27T19:14:54.766436" elapsed="0.000000"/>
+</kw>
+<kw name="Login With Valid Credentials" owner="account_business_keywords">
+<kw name="Open Login Page" owner="login_page_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:54.771072" level="INFO">Opening url 'https://demowebshop.tricentis.com/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-09-27T19:14:54.771072" elapsed="0.565703"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.338897" elapsed="0.016204"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:55.481461" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/2_open_login_page.png"&gt;&lt;img src="screenshots/2_open_login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.363252" elapsed="0.118940"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.355101" elapsed="0.127091"/>
+</kw>
+<arg>open_login_page</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.355101" elapsed="0.127091"/>
+</kw>
+<doc>Navigates directly to the Login page URL.</doc>
+<status status="PASS" start="2026-09-27T19:14:54.769053" elapsed="0.713139"/>
+</kw>
+<kw name="Enter Login Email" owner="login_page_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.483072" elapsed="0.015639"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.498711" elapsed="0.016493"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:55.515204" level="INFO">Typing text 'pawan.qa.osigzfdz@example.com' into text field 'id:Email'.</msg>
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.515204" elapsed="0.141099"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:55.771258" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_enter_login_email.png"&gt;&lt;img src="screenshots/1_enter_login_email.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.656303" elapsed="0.114955"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.656303" elapsed="0.114955"/>
+</kw>
+<arg>enter_login_email</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.656303" elapsed="0.114955"/>
+</kw>
+<arg>${email}</arg>
+<doc>Types the given value into the Email field.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.482192" elapsed="0.289572"/>
+</kw>
+<kw name="Enter Login Password" owner="login_page_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.771764" elapsed="0.015178"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.786942" elapsed="0.038846"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:55.825788" level="INFO">Typing text 'Test@12345' into text field 'id:Password'.</msg>
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.825788" elapsed="0.079212"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:56.018838" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_enter_login_password.png"&gt;&lt;img src="screenshots/1_enter_login_password.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.914084" elapsed="0.104754"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.911727" elapsed="0.107111"/>
+</kw>
+<arg>enter_login_password</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.911727" elapsed="0.107111"/>
+</kw>
+<arg>${password}</arg>
+<doc>Types the given value into the Password field.</doc>
+<status status="PASS" start="2026-09-27T19:14:55.771764" elapsed="0.247074"/>
+</kw>
+<kw name="Click Login Button" owner="login_page_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-27T19:14:56.018838" elapsed="0.023594"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:56.042432" level="INFO">Clicking element 'css:input.button-1.login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:56.042432" elapsed="1.306116"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:57.522494" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_click_login_button.png"&gt;&lt;img src="screenshots/1_click_login_button.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.348548" elapsed="0.173946"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.348548" elapsed="0.175721"/>
+</kw>
+<arg>click_login_button</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.348548" elapsed="0.175721"/>
+</kw>
+<doc>Clicks the "Log in" submit button.</doc>
+<status status="PASS" start="2026-09-27T19:14:56.018838" elapsed="1.505431"/>
+</kw>
+<arg>${REGISTERED_EMAIL}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Full login flow: opens the login page and submits credentials.</doc>
+<status status="PASS" start="2026-09-27T19:14:54.769053" elapsed="2.755216"/>
+</kw>
+<kw name="Verify User Is Logged In" owner="account_business_keywords">
+<kw name="Is Logout Link Visible" owner="login_page_keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HEADER_LOGOUT_LINK}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.525285" elapsed="0.025341"/>
+</kw>
+<msg time="2026-09-27T19:14:57.550626" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${HEADER_LOGOUT_LINK}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.525285" elapsed="0.025341"/>
+</kw>
+<return>
+<value>${visible}</value>
+<status status="PASS" start="2026-09-27T19:14:57.550626" elapsed="0.000000"/>
+</return>
+<msg time="2026-09-27T19:14:57.550626" level="INFO">${logged_in} = True</msg>
+<var>${logged_in}</var>
+<doc>Returns True/False for whether the header shows the logged-in "Log out" link.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.525285" elapsed="0.025341"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${logged_in}</arg>
+<arg>msg=Expected user to be logged in but "Log out" link was not found.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.550626" elapsed="0.000000"/>
+</kw>
+<doc>Confirms a successful login by checking the header shows "Log out".</doc>
+<status status="PASS" start="2026-09-27T19:14:57.525285" elapsed="0.025341"/>
+</kw>
+<kw name="Logout Current User" owner="account_business_keywords">
+<kw name="Is Logout Link Visible" owner="login_page_keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HEADER_LOGOUT_LINK}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.550626" elapsed="0.023520"/>
+</kw>
+<msg time="2026-09-27T19:14:57.574146" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${HEADER_LOGOUT_LINK}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.550626" elapsed="0.023520"/>
+</kw>
+<return>
+<value>${visible}</value>
+<status status="PASS" start="2026-09-27T19:14:57.574146" elapsed="0.000000"/>
+</return>
+<msg time="2026-09-27T19:14:57.574146" level="INFO">${logged_in} = True</msg>
+<var>${logged_in}</var>
+<doc>Returns True/False for whether the header shows the logged-in "Log out" link.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.550626" elapsed="0.023520"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Header Logout Link" owner="login_page_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HEADER_LOGOUT_LINK}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.574146" elapsed="0.023513"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:57.597659" level="INFO">Clicking element 'css:a.ico-logout'.</msg>
+<arg>${HEADER_LOGOUT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.597659" elapsed="1.208913"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:58.940820" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/2_click_logout_link.png"&gt;&lt;img src="screenshots/2_click_logout_link.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:58.810333" elapsed="0.130487"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:58.810333" elapsed="0.130487"/>
+</kw>
+<arg>click_logout_link</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:58.809457" elapsed="0.131363"/>
+</kw>
+<doc>Clicks "Log out" in the page header.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.574146" elapsed="1.366674"/>
+</kw>
+<arg>${logged_in}</arg>
+<arg>Click Header Logout Link</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.574146" elapsed="1.366674"/>
+</kw>
+<doc>Logs the current session out, used to reset state between tests.</doc>
+<status status="PASS" start="2026-09-27T19:14:57.550626" elapsed="1.390194"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<arg>Capture Page Screenshot Step</arg>
+<arg>TEST_FAILURE</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-09-27T19:14:58.942842" elapsed="0.000000"/>
+</kw>
+<doc>Logs in using the account created in TC02 and verifies the
+header switches to a logged-in state ("Log out" link visible).</doc>
+<tag>login</tag>
+<tag>positive</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-09-27T19:14:54.764985" elapsed="4.177857"/>
+</test>
+<test id="s1-t4" name="TC04 - Login Fails With Incorrect Password" line="53">
+<kw name="Login With Invalid Credentials" owner="account_business_keywords">
+<kw name="Open Login Page" owner="login_page_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:58.946879" level="INFO">Opening url 'https://demowebshop.tricentis.com/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-09-27T19:14:58.946879" elapsed="0.554071"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.500950" elapsed="0.021929"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:59.668295" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/3_open_login_page.png"&gt;&lt;img src="screenshots/3_open_login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.522879" elapsed="0.145416"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.522879" elapsed="0.145416"/>
+</kw>
+<arg>open_login_page</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.522879" elapsed="0.145416"/>
+</kw>
+<doc>Navigates directly to the Login page URL.</doc>
+<status status="PASS" start="2026-09-27T19:14:58.946879" elapsed="0.721416"/>
+</kw>
+<kw name="Enter Login Email" owner="login_page_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.668295" elapsed="0.013938"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.682233" elapsed="0.033206"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:59.721098" level="INFO">Typing text 'someone.not.real@example.com' into text field 'id:Email'.</msg>
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.721098" elapsed="0.067785"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:59.903882" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/2_enter_login_email.png"&gt;&lt;img src="screenshots/2_enter_login_email.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.788883" elapsed="0.114999"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.788883" elapsed="0.114999"/>
+</kw>
+<arg>enter_login_email</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.788883" elapsed="0.119600"/>
+</kw>
+<arg>${email}</arg>
+<doc>Types the given value into the Email field.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.668295" elapsed="0.240188"/>
+</kw>
+<kw name="Enter Login Password" owner="login_page_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.909293" elapsed="0.011014"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.920307" elapsed="0.021513"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:14:59.941820" level="INFO">Typing text 'WrongPass@999' into text field 'id:Password'.</msg>
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.941820" elapsed="0.061702"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:00.151223" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/2_enter_login_password.png"&gt;&lt;img src="screenshots/2_enter_login_password.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:15:00.003522" elapsed="0.151032"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:15:00.003522" elapsed="0.151032"/>
+</kw>
+<arg>enter_login_password</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:15:00.003522" elapsed="0.151032"/>
+</kw>
+<arg>${password}</arg>
+<doc>Types the given value into the Password field.</doc>
+<status status="PASS" start="2026-09-27T19:14:59.908483" elapsed="0.246071"/>
+</kw>
+<kw name="Click Login Button" owner="login_page_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-27T19:15:00.156575" elapsed="0.013690"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:00.170265" level="INFO">Clicking element 'css:input.button-1.login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:15:00.170265" elapsed="0.705809"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:01.015279" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/2_click_login_button.png"&gt;&lt;img src="screenshots/2_click_login_button.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:15:00.879014" elapsed="0.136265"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:15:00.876074" elapsed="0.139205"/>
+</kw>
+<arg>click_login_button</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:15:00.876074" elapsed="0.139205"/>
+</kw>
+<doc>Clicks the "Log in" submit button.</doc>
+<status status="PASS" start="2026-09-27T19:15:00.156575" elapsed="0.858704"/>
+</kw>
+<arg>someone.not.real@example.com</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Same flow as a valid login attempt, semantically named for
+negative test cases so intent is clear from the test case itself.</doc>
+<status status="PASS" start="2026-09-27T19:14:58.944856" elapsed="2.070423"/>
+</kw>
+<kw name="Verify Login Error Message Displayed" owner="account_business_keywords">
+<kw name="Get Login Validation Summary Text" owner="login_page_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_VALIDATION_SUMMARY}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.015279" elapsed="0.016598"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:01.059252" level="INFO">${text} = Login was unsuccessful. Please correct the errors and try again.
+No customer account found</msg>
+<var>${text}</var>
+<arg>${LOGIN_VALIDATION_SUMMARY}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.031877" elapsed="0.027375"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:01.189263" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_login_validation_summary.png"&gt;&lt;img src="screenshots/1_login_validation_summary.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.063404" elapsed="0.125859"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.059252" elapsed="0.130011"/>
+</kw>
+<arg>login_validation_summary</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.059252" elapsed="0.130011"/>
+</kw>
+<return>
+<value>${text}</value>
+<status status="PASS" start="2026-09-27T19:15:01.189263" elapsed="0.000000"/>
+</return>
+<msg time="2026-09-27T19:15:01.189263" level="INFO">${actual_text} = Login was unsuccessful. Please correct the errors and try again.
+No customer account found</msg>
+<var>${actual_text}</var>
+<doc>Returns the text of the top-level validation summary error box.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.015279" elapsed="0.173984"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2026-09-27T19:15:01.189263" level="FAIL">'Login was unsuccessful. Please correct the errors and try again.
+No customer account found' does not contain 'The credentials provided are incorrect'</msg>
+<arg>${actual_text}</arg>
+<arg>${expected_text}</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="FAIL" start="2026-09-27T19:15:01.189263" elapsed="0.000000">'Login was unsuccessful. Please correct the errors and try again.
+No customer account found' does not contain 'The credentials provided are incorrect'</status>
+</kw>
+<arg>The credentials provided are incorrect</arg>
+<doc>Confirms the login validation summary is shown with expected text.</doc>
+<status status="FAIL" start="2026-09-27T19:15:01.015279" elapsed="0.173984">'Login was unsuccessful. Please correct the errors and try again.
+No customer account found' does not contain 'The credentials provided are incorrect'</status>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:01.298080" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/1_TEST_FAILURE.png"&gt;&lt;img src="screenshots/1_TEST_FAILURE.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.189263" elapsed="0.108817"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.189263" elapsed="0.108817"/>
+</kw>
+<arg>TEST_FAILURE</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.189263" elapsed="0.108817"/>
+</kw>
+<arg>Capture Page Screenshot Step</arg>
+<arg>TEST_FAILURE</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.189263" elapsed="0.108817"/>
+</kw>
+<doc>Attempts to log in with a valid-format email but a wrong
+password and verifies the correct validation error appears.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="FAIL" start="2026-09-27T19:14:58.944856" elapsed="2.353224">'Login was unsuccessful. Please correct the errors and try again.
+No customer account found' does not contain 'The credentials provided are incorrect'</status>
+</test>
+<test id="s1-t5" name="TC05 - Login Fails With Empty Email And Password" line="60">
+<kw name="Attempt Login With Empty Credentials" owner="account_business_keywords">
+<kw name="Open Login Page" owner="login_page_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:01.303543" level="INFO">Opening url 'https://demowebshop.tricentis.com/login'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.303543" elapsed="0.587250"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_EMAIL_FIELD}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.890793" elapsed="0.015310"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:02.030060" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/4_open_login_page.png"&gt;&lt;img src="screenshots/4_open_login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.914506" elapsed="0.115554"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.906103" elapsed="0.125229"/>
+</kw>
+<arg>open_login_page</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.906103" elapsed="0.125229"/>
+</kw>
+<doc>Navigates directly to the Login page URL.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.303543" elapsed="0.727789"/>
+</kw>
+<kw name="Click Login Button" owner="login_page_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.031966" elapsed="0.016862"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:02.048828" level="INFO">Clicking element 'css:input.button-1.login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.048828" elapsed="0.635998"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:02.798601" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/3_click_login_button.png"&gt;&lt;img src="screenshots/3_click_login_button.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.686362" elapsed="0.112239"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.686362" elapsed="0.112239"/>
+</kw>
+<arg>click_login_button</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.684826" elapsed="0.113775"/>
+</kw>
+<doc>Clicks the "Log in" submit button.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.031332" elapsed="0.767269"/>
+</kw>
+<doc>Submits the login form with both fields left blank.</doc>
+<status status="PASS" start="2026-09-27T19:15:01.303543" elapsed="1.495058"/>
+</kw>
+<kw name="Verify Login Error Message Displayed" owner="account_business_keywords">
+<kw name="Get Login Validation Summary Text" owner="login_page_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_VALIDATION_SUMMARY}</arg>
+<arg>timeout=${EXPLICIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.798601" elapsed="0.019813"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:02.833360" level="INFO">${text} = Login was unsuccessful. Please correct the errors and try again.
+No customer account found</msg>
+<var>${text}</var>
+<arg>${LOGIN_VALIDATION_SUMMARY}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.818414" elapsed="0.014946"/>
+</kw>
+<kw name="Capture Page Screenshot Step" owner="login_page_keywords">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-27T19:15:02.977063" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/2_login_validation_summary.png"&gt;&lt;img src="screenshots/2_login_validation_summary.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.833360" elapsed="0.143703"/>
+</kw>
+<arg>${SCREENSHOT_ON_ACTION}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${SCREENSHOT_DIR}${/}{index}_${step_name}.png</arg>
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.833360" elapsed="0.143703"/>
+</kw>
+<arg>login_validation_summary</arg>
+<doc>Standard screenshot-after-every-action helper. Controlled by
+True so it can be globally disabled if needed.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.833360" elapsed="0.143703"/>
+</kw>
+<return>
+<value>${text}</value>
+<status status="PASS" start="2026-09-27T19:15:02.977063" elapsed="0.000000"/>
+</return>
+<msg time="2026-09-27T19:15:02.977063" level="INFO">${actual_text} = Login was unsuccessful. Please correct the errors and try again.
+No customer account found</msg>
+<var>${actual_text}</var>
+<doc>Returns the text of the top-level validation summary error box.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.798601" elapsed="0.178462"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${actual_text}</arg>
+<arg>${expected_text}</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.977063" elapsed="0.000000"/>
+</kw>
+<arg>Login was unsuccessful</arg>
+<doc>Confirms the login validation summary is shown with expected text.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.798601" elapsed="0.178462"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<arg>Capture Page Screenshot Step</arg>
+<arg>TEST_FAILURE</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.977063" elapsed="0.004565"/>
+</kw>
+<doc>Submits the login form with both fields blank and verifies
+the form does not proceed and shows a validation message.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="PASS" start="2026-09-27T19:15:01.303543" elapsed="1.678584"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-09-27T19:15:02.982127" elapsed="2.174914"/>
+</kw>
+<doc>Test suite covering the Login page of DemoWebShop
+(https://demowebshop.tricentis.com/login).
+
+Design: strict L1 (element) / L2 (business) / L3 (test case) layering.
+Test cases below call ONLY L2/L1 keywords - never a raw SeleniumLibrary
+keyword or a hardcoded locator - keeping this file readable as
+plain-English business steps.
+
+Test Case 02 registers a fresh account so Test Case 03 has a
+guaranteed-valid login (DemoWebShop requires a registered account;
+there is no fixed set of valid demo credentials).</doc>
+<status status="FAIL" start="2026-09-27T19:13:31.709790" elapsed="93.447251"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="1" skip="0">login</stat>
+<stat pass="1" fail="1" skip="0">negative</stat>
+<stat pass="1" fail="0" skip="0">positive</stat>
+<stat pass="1" fail="0" skip="0">registration</stat>
+<stat pass="1" fail="0" skip="0">setup</stat>
+<stat pass="2" fail="0" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">ui</stat>
+<stat pass="1" fail="0" skip="0">validation</stat>
+</tag>
+<suite>
+<stat name="Login Test Suite" id="s1" pass="4" fail="1" skip="0">Login Test Suite</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-09-27T19:13:31.785507" level="WARN">Error in file 'C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\resources\keywords\L1_element_keywords\login_page_keywords.resource' on line 49: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-09-27T19:13:31.785507" level="WARN">Error in file 'C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\resources\keywords\L1_element_keywords\login_page_keywords.resource' on line 55: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-09-27T19:13:32.103307" level="WARN">Error in file 'C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\resources\keywords\L2_business_keywords\account_business_keywords.resource' on line 29: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2026-09-27T19:13:32.107292" level="WARN">Error in file 'C:\Users\PAWAN\Downloads\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\resources\keywords\L1_element_keywords\registration_page_keywords.resource' on line 57: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
