@@ -1,0 +1,2010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.7 on win32)" generated="2026-10-03T22:28:55.419800" rpa="false" schemaversion="5">
+<suite id="s1" name="GitHub Copilot" source="C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\GitHub_Copilot.robot">
+<test id="s1-t1" name="TC_DWS_003 Empty Registration Form Validation" line="38">
+<kw name="Open DemoWebShop" type="SETUP">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-10-03T22:28:55.682505" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots"&gt;C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots&lt;/a&gt;'.</msg>
+<arg>${SCREENSHOT_DIRECTORY}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-10-03T22:28:55.680999" elapsed="0.001506"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-03T22:28:55.683514" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\0c67d98b-bed6-4019-a1de-94eec92d8f90"}</msg>
+<msg time="2026-10-03T22:28:55.711401" level="INFO">Starting Browser process C:\Users\PAWAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:50301</msg>
+<msg time="2026-10-03T22:28:56.471426" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\0c67d98b-bed6-4019-a1de-94eec92d8f90"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:28:55.682505" elapsed="0.790436"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-03T22:28:56.475970" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-03T22:28:56.494579" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-03T22:28:56.494579" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:28:56.473956" elapsed="0.020623"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-03T22:29:01.168068" level="INFO">Successfully initialized new page object and opened url: https://demowebshop.tricentis.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-03T22:28:56.494579" elapsed="4.673489"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2026-10-03T22:29:01.171068" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2026-10-03T22:29:01.181600" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits until the page reaches the required load state.</doc>
+<status status="PASS" start="2026-10-03T22:29:01.169071" elapsed="0.012529"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:01.184163" level="INFO">${safe_name} = TC_DWS_003_Empty_Registration_Form_Validation_start</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:01.183140" elapsed="0.001023"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:01.383627" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_003_Empty_Registration_Form_Validation_start.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_003_Empty_Registration_Form_Validation_start.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:01.185200" elapsed="0.198951"/>
+</kw>
+<arg>${TEST NAME}_start</arg>
+<status status="PASS" start="2026-10-03T22:29:01.182602" elapsed="0.201549"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:28:55.680999" elapsed="5.703152"/>
+</kw>
+<kw name="Open Registration Page">
+<kw name="Go To" owner="Browser">
+<msg time="2026-10-03T22:29:01.908540" level="INFO">Successfully opened URL https://demowebshop.tricentis.com/register</msg>
+<arg>${BASE_URL}/register</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-10-03T22:29:01.385182" elapsed="0.523358"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:29:01.952832" level="INFO">Waited for Element with selector id=register-button at state visible</msg>
+<arg>id=register-button</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:29:01.909542" elapsed="0.044593"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:01.957127" level="INFO">${safe_name} = registration_page</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:01.956128" elapsed="0.000999"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:02.058707" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/registration_page.png" target="_blank"&gt;&lt;img src="screenshots/registration_page.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:01.958127" elapsed="0.101579"/>
+</kw>
+<arg>registration_page</arg>
+<status status="PASS" start="2026-10-03T22:29:01.954135" elapsed="0.105571"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:01.385182" elapsed="0.674524"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:29:02.061723" level="INFO">Clicks the element 'id=register-button'.</msg>
+<arg>id=register-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.059706" elapsed="0.040398"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-10-03T22:29:02.143732" level="INFO">Text: ['First name is required.']</msg>
+<msg time="2026-10-03T22:29:02.144736" level="INFO">${first_name_error} = First name is required.</msg>
+<var>${first_name_error}</var>
+<arg>css=[data-valmsg-for='FirstName']</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.101105" elapsed="0.043631"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-10-03T22:29:02.162759" level="INFO">Text: ['Last name is required.']</msg>
+<msg time="2026-10-03T22:29:02.162759" level="INFO">${last_name_error} = Last name is required.</msg>
+<var>${last_name_error}</var>
+<arg>css=[data-valmsg-for='LastName']</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.145755" elapsed="0.017004"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-10-03T22:29:02.186864" level="INFO">Text: ['Email is required.']</msg>
+<msg time="2026-10-03T22:29:02.186864" level="INFO">${email_error} = Email is required.</msg>
+<var>${email_error}</var>
+<arg>css=[data-valmsg-for='Email']</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.162759" elapsed="0.024105"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-10-03T22:29:02.201183" level="INFO">Text: ['Password is required.']</msg>
+<msg time="2026-10-03T22:29:02.202823" level="INFO">${password_error} = Password is required.</msg>
+<var>${password_error}</var>
+<arg>css=[data-valmsg-for='Password']</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.187873" elapsed="0.014950"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-10-03T22:29:02.212611" level="INFO">Text: ['Password is required.']</msg>
+<msg time="2026-10-03T22:29:02.212611" level="INFO">${confirm_error} = Password is required.</msg>
+<var>${confirm_error}</var>
+<arg>css=[data-valmsg-for='ConfirmPassword']</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.202823" elapsed="0.009788"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${first_name_error}</arg>
+<arg>First name is required</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.212611" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${last_name_error}</arg>
+<arg>Last name is required</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.212611" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${email_error}</arg>
+<arg>Email is required</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.212611" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${password_error}</arg>
+<arg>Password is required</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.212611" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${confirm_error}</arg>
+<arg>Password is required</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.212611" elapsed="0.005176"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:02.217787" level="INFO">${safe_name} = TC_DWS_003_empty_registration</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.217787" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:02.344174" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_003_empty_registration.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_003_empty_registration.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.217787" elapsed="0.127402"/>
+</kw>
+<arg>TC_DWS_003_empty_registration</arg>
+<status status="PASS" start="2026-10-03T22:29:02.217787" elapsed="0.127402"/>
+</kw>
+<kw name="Finish Test" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Step</arg>
+<arg>${TEST NAME}_failure</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.346196" elapsed="0.000998"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:02.349189" level="INFO">${safe_name} = TC_DWS_003_Empty_Registration_Form_Validation_end</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.348187" elapsed="0.001002"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:02.447087" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_003_Empty_Registration_Form_Validation_end.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_003_Empty_Registration_Form_Validation_end.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.349189" elapsed="0.098914"/>
+</kw>
+<arg>${TEST NAME}_end</arg>
+<status status="PASS" start="2026-10-03T22:29:02.348187" elapsed="0.099916"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-03T22:29:02.996269" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-03T22:29:02.448103" elapsed="0.548166"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:02.345189" elapsed="0.651080"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:28:55.679998" elapsed="7.316271"/>
+</test>
+<test id="s1-t2" name="TC_DWS_015 Advanced Search By Category" line="142">
+<kw name="Open DemoWebShop" type="SETUP">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-10-03T22:29:03.012631" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots"&gt;C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots&lt;/a&gt;' already exists.</msg>
+<arg>${SCREENSHOT_DIRECTORY}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-10-03T22:29:03.012631" elapsed="0.000000"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-03T22:29:03.012631" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\da8ae6a2-24b8-42e2-a813-79a442b1b37d"}</msg>
+<msg time="2026-10-03T22:29:03.286419" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\da8ae6a2-24b8-42e2-a813-79a442b1b37d"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:29:03.012631" elapsed="0.273788"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-03T22:29:03.290680" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-03T22:29:03.309649" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-03T22:29:03.310896" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:29:03.287687" elapsed="0.023209"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-03T22:29:07.090298" level="INFO">Successfully initialized new page object and opened url: https://demowebshop.tricentis.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-03T22:29:03.313153" elapsed="3.777145"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2026-10-03T22:29:07.092808" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2026-10-03T22:29:07.099907" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits until the page reaches the required load state.</doc>
+<status status="PASS" start="2026-10-03T22:29:07.091302" elapsed="0.008605"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:07.103557" level="INFO">${safe_name} = TC_DWS_015_Advanced_Search_By_Category_start</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:07.102884" elapsed="0.000673"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:07.318984" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_015_Advanced_Search_By_Category_start.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_015_Advanced_Search_By_Category_start.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:07.104568" elapsed="0.214416"/>
+</kw>
+<arg>${TEST NAME}_start</arg>
+<status status="PASS" start="2026-10-03T22:29:07.101290" elapsed="0.218693"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:03.012631" elapsed="4.307352"/>
+</kw>
+<kw name="Go To" owner="Browser">
+<msg time="2026-10-03T22:29:08.038372" level="INFO">Successfully opened URL https://demowebshop.tricentis.com/search</msg>
+<arg>${BASE_URL}/search</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-10-03T22:29:07.319983" elapsed="0.719387"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:29:08.041368" level="INFO">Fills the text 'computer' in the given field.</msg>
+<arg>id=Q</arg>
+<arg>computer</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:08.039370" elapsed="0.049196"/>
+</kw>
+<kw name="Check Checkbox" owner="Browser">
+<arg>id=As</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:08.088566" elapsed="0.054251"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2026-10-03T22:29:08.143825" level="INFO">Selects the option(s) Computers by attribute SelectAttribute.label from element id=Cid.</msg>
+<arg>id=Cid</arg>
+<arg>label</arg>
+<arg>Computers</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:08.142817" elapsed="0.040131"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:29:08.185458" level="INFO">Clicks the element 'css=input.search-button'.</msg>
+<arg>css=input.search-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:08.184462" elapsed="0.738051"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:29:08.994516" level="INFO">Waited for Element with selector css=.search-results at state visible</msg>
+<arg>css=.search-results</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:29:08.923527" elapsed="0.070989"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-10-03T22:29:09.032770" level="INFO">Text: ['No products were found that matched your criteria.']</msg>
+<msg time="2026-10-03T22:29:09.032770" level="INFO">${results} = No products were found that matched your criteria.</msg>
+<var>${results}</var>
+<arg>css=.search-results</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:08.994516" elapsed="0.038254"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2026-10-03T22:29:09.034323" level="FAIL">'No products were found that matched your criteria.' does not contain 'computer'</msg>
+<arg>${results}</arg>
+<arg>computer</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="FAIL" start="2026-10-03T22:29:09.033312" elapsed="0.001011">'No products were found that matched your criteria.' does not contain 'computer'</status>
+</kw>
+<kw name="Capture Step">
+<arg>TC_DWS_015_advanced_search</arg>
+<status status="NOT RUN" start="2026-10-03T22:29:09.034323" elapsed="0.000994"/>
+</kw>
+<kw name="Finish Test" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:09.038316" level="INFO">${safe_name} = TC_DWS_015_Advanced_Search_By_Category_failure</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:09.037317" elapsed="0.000999"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:09.193874" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_015_Advanced_Search_By_Category_failure.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_015_Advanced_Search_By_Category_failure.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:09.038316" elapsed="0.156567"/>
+</kw>
+<arg>${TEST NAME}_failure</arg>
+<status status="PASS" start="2026-10-03T22:29:09.036317" elapsed="0.158566"/>
+</kw>
+<arg>Capture Step</arg>
+<arg>${TEST NAME}_failure</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-03T22:29:09.036317" elapsed="0.158566"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:09.199369" level="INFO">${safe_name} = TC_DWS_015_Advanced_Search_By_Category_end</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:09.197369" elapsed="0.002000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:09.313132" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_015_Advanced_Search_By_Category_end.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_015_Advanced_Search_By_Category_end.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:09.200369" elapsed="0.113777"/>
+</kw>
+<arg>${TEST NAME}_end</arg>
+<status status="PASS" start="2026-10-03T22:29:09.194883" elapsed="0.119263"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-03T22:29:10.441602" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-03T22:29:09.315142" elapsed="1.127456"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:09.035317" elapsed="1.407281"/>
+</kw>
+<status status="FAIL" start="2026-10-03T22:29:03.008784" elapsed="7.433814">'No products were found that matched your criteria.' does not contain 'computer'</status>
+</test>
+<test id="s1-t3" name="TC_DWS_020 Verify Product Detail Page" line="190">
+<kw name="Open DemoWebShop" type="SETUP">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-10-03T22:29:10.473681" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots"&gt;C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots&lt;/a&gt;' already exists.</msg>
+<arg>${SCREENSHOT_DIRECTORY}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-10-03T22:29:10.473681" elapsed="0.000000"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-03T22:29:10.475285" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\4a21377b-f17b-4eef-b5ab-82b7a8f50694"}</msg>
+<msg time="2026-10-03T22:29:10.719192" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\4a21377b-f17b-4eef-b5ab-82b7a8f50694"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:29:10.474678" elapsed="0.244514"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-03T22:29:10.721191" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-03T22:29:10.736755" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-03T22:29:10.736755" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:29:10.720191" elapsed="0.016564"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-03T22:29:17.534318" level="INFO">Successfully initialized new page object and opened url: https://demowebshop.tricentis.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-03T22:29:10.736755" elapsed="6.797563"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2026-10-03T22:29:17.544318" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2026-10-03T22:29:17.575323" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits until the page reaches the required load state.</doc>
+<status status="PASS" start="2026-10-03T22:29:17.535304" elapsed="0.040019"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:17.599362" level="INFO">${safe_name} = TC_DWS_020_Verify_Product_Detail_Page_start</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:17.583900" elapsed="0.015462"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:17.957585" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_020_Verify_Product_Detail_Page_start.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_020_Verify_Product_Detail_Page_start.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:17.600362" elapsed="0.358219"/>
+</kw>
+<arg>${TEST NAME}_start</arg>
+<status status="PASS" start="2026-10-03T22:29:17.576325" elapsed="0.390066"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:10.473681" elapsed="7.492710"/>
+</kw>
+<kw name="Open Laptop Product">
+<kw name="Go To" owner="Browser">
+<msg time="2026-10-03T22:29:18.831135" level="INFO">Successfully opened URL https://demowebshop.tricentis.com/141-inch-laptop</msg>
+<arg>${BASE_URL}/141-inch-laptop</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-10-03T22:29:17.975932" elapsed="0.856828"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:29:18.912715" level="INFO">Waited for Element with selector css=.product-name h1 at state visible</msg>
+<arg>css=.product-name h1</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:29:18.833786" elapsed="0.078929"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:18.930622" level="INFO">${safe_name} = laptop_product</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:18.921838" elapsed="0.009771"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:19.145029" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/laptop_product.png" target="_blank"&gt;&lt;img src="screenshots/laptop_product.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:18.937731" elapsed="0.207298"/>
+</kw>
+<arg>laptop_product</arg>
+<status status="PASS" start="2026-10-03T22:29:18.919849" elapsed="0.226179"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:17.967390" elapsed="1.178638"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:29:19.202638" level="INFO">Waited for Element with selector id=add-to-cart-button-31 at state visible</msg>
+<arg>id=add-to-cart-button-31</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:29:19.157109" elapsed="0.046075"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:29:19.279485" level="INFO">Waited for Element with selector css=.product-name h1 at state visible</msg>
+<arg>css=.product-name h1</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:29:19.211997" elapsed="0.067488"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:29:19.343308" level="INFO">Waited for Element with selector css=.product-price at state visible</msg>
+<arg>css=.product-price</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:29:19.280485" elapsed="0.063834"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:29:29.506070" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-03T22:29:29.506070" level="INFO">See also file:///C:/Users/PAWAN/Python_project_workspace/DemoWebShop_RF_Framework/DemoWebShop_RF_Framework/results/visible-check-2/playwright-log.txt for additional details.</msg>
+<msg time="2026-10-03T22:29:29.508070" level="FAIL">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('id=product_enteredQuantity_31') to be visible
+</msg>
+<arg>id=product_enteredQuantity_31</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2026-10-03T22:29:19.344319" elapsed="10.180331">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('id=product_enteredQuantity_31') to be visible
+</status>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>id=add-to-cart-button-31</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-10-03T22:29:29.524650" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>text=Add to compare list</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-10-03T22:29:29.524650" elapsed="0.000974"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>text=Email a friend</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-10-03T22:29:29.525624" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Step">
+<arg>TC_DWS_020_product_details</arg>
+<status status="NOT RUN" start="2026-10-03T22:29:29.528627" elapsed="0.000000"/>
+</kw>
+<kw name="Finish Test" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:29.548764" level="INFO">${safe_name} = TC_DWS_020_Verify_Product_Detail_Page_failure</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:29.548764" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:29.701092" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_020_Verify_Product_Detail_Page_failure.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_020_Verify_Product_Detail_Page_failure.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:29.549763" elapsed="0.152857"/>
+</kw>
+<arg>${TEST NAME}_failure</arg>
+<status status="PASS" start="2026-10-03T22:29:29.543714" elapsed="0.158906"/>
+</kw>
+<arg>Capture Step</arg>
+<arg>${TEST NAME}_failure</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-03T22:29:29.536164" elapsed="0.166456"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:29.708637" level="INFO">${safe_name} = TC_DWS_020_Verify_Product_Detail_Page_end</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:29.707637" elapsed="0.001000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:29.893591" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_020_Verify_Product_Detail_Page_end.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_020_Verify_Product_Detail_Page_end.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:29.710638" elapsed="0.182953"/>
+</kw>
+<arg>${TEST NAME}_end</arg>
+<status status="PASS" start="2026-10-03T22:29:29.703629" elapsed="0.190957"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-03T22:29:32.501473" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-03T22:29:29.894586" elapsed="2.606887"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:29.534165" elapsed="2.968121"/>
+</kw>
+<status status="FAIL" start="2026-10-03T22:29:10.459698" elapsed="22.043180">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('id=product_enteredQuantity_31') to be visible
+</status>
+</test>
+<test id="s1-t4" name="TC_DWS_025 Add Product From Books Listing" line="244">
+<kw name="Open DemoWebShop" type="SETUP">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-10-03T22:29:32.549512" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots"&gt;C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots&lt;/a&gt;' already exists.</msg>
+<arg>${SCREENSHOT_DIRECTORY}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-10-03T22:29:32.548518" elapsed="0.001557"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-03T22:29:32.553086" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\6696548b-8397-41ec-9b4e-a4c1d6c9d60f"}</msg>
+<msg time="2026-10-03T22:29:33.065821" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\6696548b-8397-41ec-9b4e-a4c1d6c9d60f"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:29:32.550813" elapsed="0.515008"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-03T22:29:33.114472" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-03T22:29:33.200175" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-03T22:29:33.201167" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:29:33.085086" elapsed="0.116081"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-03T22:29:39.275468" level="INFO">Successfully initialized new page object and opened url: https://demowebshop.tricentis.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-03T22:29:33.203705" elapsed="6.071763"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2026-10-03T22:29:39.275468" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2026-10-03T22:29:39.292607" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits until the page reaches the required load state.</doc>
+<status status="PASS" start="2026-10-03T22:29:39.275468" elapsed="0.017139"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:39.292607" level="INFO">${safe_name} = TC_DWS_025_Add_Product_From_Books_Listing_start</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:39.292607" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:42.616126" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_025_Add_Product_From_Books_Listing_start.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_025_Add_Product_From_Books_Listing_start.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:39.292607" elapsed="3.323519"/>
+</kw>
+<arg>${TEST NAME}_start</arg>
+<status status="PASS" start="2026-10-03T22:29:39.292607" elapsed="3.323519"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:32.546191" elapsed="10.069935"/>
+</kw>
+<kw name="Go To" owner="Browser">
+<msg time="2026-10-03T22:29:43.544533" level="INFO">Successfully opened URL https://demowebshop.tricentis.com/books</msg>
+<arg>${BASE_URL}/books</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-10-03T22:29:42.617127" elapsed="0.928419"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:29:43.547548" level="INFO">Clicks the element 'xpath=(//div[contains(@class,'product-grid')]//input[contains(@class,'product-box-add-to-cart-button')])[1]'.</msg>
+<arg>xpath=(//div[contains(@class,'product-grid')]//input[contains(@class,'product-box-add-to-cart-button')])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:29:43.545546" elapsed="7.417075"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:29:51.831209" level="INFO">Waited for Element with selector css=p.content at state visible</msg>
+<arg>css=p.content</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:29:50.975241" elapsed="0.855968"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:29:51.850766" level="INFO">Waited for Element with selector xpath=(//div[contains(@class,'header-links')]//a[contains(@class,'ico-cart')])[1] at state visible</msg>
+<arg>xpath=(//div[contains(@class,'header-links')]//a[contains(@class,'ico-cart')])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:29:51.832715" elapsed="0.018051"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:51.854339" level="INFO">${safe_name} = TC_DWS_025_book_added</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:51.853328" elapsed="0.001011"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:54.641344" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_025_book_added.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_025_book_added.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:51.855338" elapsed="2.786006"/>
+</kw>
+<arg>TC_DWS_025_book_added</arg>
+<status status="PASS" start="2026-10-03T22:29:51.852787" elapsed="2.790130"/>
+</kw>
+<kw name="Finish Test" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Step</arg>
+<arg>${TEST NAME}_failure</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-03T22:29:54.643978" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:29:54.644953" level="INFO">${safe_name} = TC_DWS_025_Add_Product_From_Books_Listing_end</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:29:54.644953" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:29:56.825743" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_025_Add_Product_From_Books_Listing_end.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_025_Add_Product_From_Books_Listing_end.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:29:54.644953" elapsed="2.180790"/>
+</kw>
+<arg>${TEST NAME}_end</arg>
+<status status="PASS" start="2026-10-03T22:29:54.643978" elapsed="2.181765"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-03T22:29:57.341623" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-03T22:29:56.825743" elapsed="0.516389"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:54.642917" elapsed="2.699215"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:32.522691" elapsed="24.819441"/>
+</test>
+<test id="s1-t5" name="TC_DWS_045 Add Address To Customer Account" line="500">
+<kw name="Open DemoWebShop" type="SETUP">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-10-03T22:29:57.361057" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots"&gt;C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots&lt;/a&gt;' already exists.</msg>
+<arg>${SCREENSHOT_DIRECTORY}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-10-03T22:29:57.361057" elapsed="0.000000"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-03T22:29:57.363145" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\9a6d108c-6005-472d-adeb-11a59991cf62"}</msg>
+<msg time="2026-10-03T22:29:57.591239" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\9a6d108c-6005-472d-adeb-11a59991cf62"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:29:57.362065" elapsed="0.229174"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-03T22:29:57.596758" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-03T22:29:57.610954" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-03T22:29:57.611955" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:29:57.592748" elapsed="0.019207"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-03T22:30:04.845083" level="INFO">Successfully initialized new page object and opened url: https://demowebshop.tricentis.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-03T22:29:57.612953" elapsed="7.233908"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2026-10-03T22:30:04.848898" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2026-10-03T22:30:04.854952" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits until the page reaches the required load state.</doc>
+<status status="PASS" start="2026-10-03T22:30:04.847898" elapsed="0.007054"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:04.856953" level="INFO">${safe_name} = TC_DWS_045_Add_Address_To_Customer_Account_start</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:04.855955" elapsed="0.000998"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:05.028967" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_045_Add_Address_To_Customer_Account_start.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_045_Add_Address_To_Customer_Account_start.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:04.856953" elapsed="0.172014"/>
+</kw>
+<arg>${TEST NAME}_start</arg>
+<status status="PASS" start="2026-10-03T22:30:04.855955" elapsed="0.173012"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:57.361057" elapsed="7.667910"/>
+</kw>
+<kw name="Ensure Registered Customer">
+<if>
+<branch type="IF" condition="$REGISTERED_EMAIL == ''">
+<kw name="Register Unique Customer">
+<kw name="Generate Unique Email">
+<kw name="Generate Random String" owner="String">
+<msg time="2026-10-03T22:30:05.029987" level="INFO">${suffix} = aarpsahxoj</msg>
+<var>${suffix}</var>
+<arg>10</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired `length` from the given `chars`.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.029987" elapsed="0.000000"/>
+</kw>
+<return>
+<value>pawan.qa.${suffix}@example.com</value>
+<status status="PASS" start="2026-10-03T22:30:05.031006" elapsed="0.000000"/>
+</return>
+<msg time="2026-10-03T22:30:05.031006" level="INFO">${email} = pawan.qa.aarpsahxoj@example.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2026-10-03T22:30:05.029987" elapsed="0.001019"/>
+</kw>
+<kw name="Open Registration Page">
+<kw name="Go To" owner="Browser">
+<msg time="2026-10-03T22:30:05.504146" level="INFO">Successfully opened URL https://demowebshop.tricentis.com/register</msg>
+<arg>${BASE_URL}/register</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.031006" elapsed="0.473140"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:30:05.532721" level="INFO">Waited for Element with selector id=register-button at state visible</msg>
+<arg>id=register-button</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.505144" elapsed="0.027577"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:05.535734" level="INFO">${safe_name} = registration_page</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.534753" elapsed="0.000981"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:05.638758" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/registration_page.png" target="_blank"&gt;&lt;img src="screenshots/registration_page.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.535734" elapsed="0.104018"/>
+</kw>
+<arg>registration_page</arg>
+<status status="PASS" start="2026-10-03T22:30:05.532721" elapsed="0.107031"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:30:05.031006" elapsed="0.608746"/>
+</kw>
+<kw name="Fill Registration Form">
+<kw name="Check Checkbox" owner="Browser">
+<arg>id=gender-male</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.641753" elapsed="0.024915"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:05.668708" level="INFO">Fills the text 'John' in the given field.</msg>
+<arg>id=FirstName</arg>
+<arg>${FIRST_NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.667668" elapsed="0.013566"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:05.681234" level="INFO">Fills the text 'Tester' in the given field.</msg>
+<arg>id=LastName</arg>
+<arg>${LAST_NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.681234" elapsed="0.018118"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:05.701519" level="INFO">Fills the text 'pawan.qa.aarpsahxoj@example.com' in the given field.</msg>
+<arg>id=Email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.700494" elapsed="0.019511"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:05.720990" level="INFO">Fills the text 'Test@1234' in the given field.</msg>
+<arg>id=Password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.720005" elapsed="0.017793"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:05.739798" level="INFO">Fills the text 'Test@1234' in the given field.</msg>
+<arg>id=ConfirmPassword</arg>
+<arg>${confirmation}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.737798" elapsed="0.012331"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:05.751169" level="INFO">${safe_name} = registration_form_filled</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.751169" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:05.842971" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/registration_form_filled.png" target="_blank"&gt;&lt;img src="screenshots/registration_form_filled.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.752683" elapsed="0.090288"/>
+</kw>
+<arg>registration_form_filled</arg>
+<status status="PASS" start="2026-10-03T22:30:05.750129" elapsed="0.092842"/>
+</kw>
+<arg>${email}</arg>
+<arg>${TEST_PASSWORD}</arg>
+<arg>${TEST_PASSWORD}</arg>
+<status status="PASS" start="2026-10-03T22:30:05.640751" elapsed="0.202220"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:30:05.843983" level="INFO">Clicks the element 'id=register-button'.</msg>
+<arg>id=register-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:05.842971" elapsed="1.098843"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:30:06.969350" level="INFO">Waited for Element with selector text=Your registration completed at state visible</msg>
+<arg>text=Your registration completed</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:30:06.942813" elapsed="0.026537"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-10-03T22:30:06.970347" level="INFO">${REGISTERED_EMAIL} = pawan.qa.aarpsahxoj@example.com</msg>
+<arg>${REGISTERED_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Makes the variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-10-03T22:30:06.970347" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:06.971338" level="INFO">${safe_name} = registration_success</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:06.970347" elapsed="0.000991"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:07.052954" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/registration_success.png" target="_blank"&gt;&lt;img src="screenshots/registration_success.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:06.971338" elapsed="0.081616"/>
+</kw>
+<arg>registration_success</arg>
+<status status="PASS" start="2026-10-03T22:30:06.970347" elapsed="0.084045"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:30:07.055390" level="INFO">Clicks the element 'text=Continue'.</msg>
+<arg>text=Continue</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:07.054392" elapsed="0.496659"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:30:07.584636" level="INFO">Waited for Element with selector css=a.ico-logout at state visible</msg>
+<arg>css=a.ico-logout</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:30:07.552561" elapsed="0.033063"/>
+</kw>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2026-10-03T22:30:07.585624" elapsed="0.000000"/>
+</return>
+<msg time="2026-10-03T22:30:07.586623" level="INFO">${email} = pawan.qa.aarpsahxoj@example.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2026-10-03T22:30:05.029987" elapsed="2.556636"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:30:07.587623" level="INFO">Clicks the element 'css=a.ico-logout'.</msg>
+<arg>css=a.ico-logout</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:07.586623" elapsed="0.972586"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:30:08.591761" level="INFO">Waited for Element with selector css=a.ico-login at state visible</msg>
+<arg>css=a.ico-login</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:30:08.560663" elapsed="0.032098"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:30:05.028967" elapsed="3.563794"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${email}</var>
+<arg>${REGISTERED_EMAIL}</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="NOT RUN" start="2026-10-03T22:30:08.593299" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-10-03T22:30:08.592761" elapsed="0.001547"/>
+</branch>
+<status status="PASS" start="2026-10-03T22:30:05.028967" elapsed="3.565341"/>
+</if>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2026-10-03T22:30:08.594308" elapsed="0.000000"/>
+</return>
+<msg time="2026-10-03T22:30:08.595292" level="INFO">${email} = pawan.qa.aarpsahxoj@example.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2026-10-03T22:30:05.028967" elapsed="3.566325"/>
+</kw>
+<kw name="Login As">
+<kw name="Open Login Page">
+<kw name="Go To" owner="Browser">
+<msg time="2026-10-03T22:30:09.066337" level="INFO">Successfully opened URL https://demowebshop.tricentis.com/login</msg>
+<arg>${BASE_URL}/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-10-03T22:30:08.597306" elapsed="0.470029"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:30:09.081994" level="INFO">Waited for Element with selector id=Email at state visible</msg>
+<arg>id=Email</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:30:09.067335" elapsed="0.015184"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:09.082519" level="INFO">${safe_name} = login_page</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:09.082519" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:09.168019" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/login_page.png" target="_blank"&gt;&lt;img src="screenshots/login_page.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:09.082519" elapsed="0.085500"/>
+</kw>
+<arg>login_page</arg>
+<status status="PASS" start="2026-10-03T22:30:09.082519" elapsed="0.086497"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:30:08.596306" elapsed="0.572710"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:09.170017" level="INFO">Fills the text 'pawan.qa.aarpsahxoj@example.com' in the given field.</msg>
+<arg>id=Email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:09.169016" elapsed="0.029726"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:09.202756" level="INFO">Fills the text 'Test@1234' in the given field.</msg>
+<arg>id=Password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:09.198742" elapsed="0.039083"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:09.238825" level="INFO">${safe_name} = login_credentials_entered</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:09.238825" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:09.341171" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/login_credentials_entered.png" target="_blank"&gt;&lt;img src="screenshots/login_credentials_entered.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:09.239824" elapsed="0.101347"/>
+</kw>
+<arg>login_credentials_entered</arg>
+<status status="PASS" start="2026-10-03T22:30:09.237825" elapsed="0.103346"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:30:09.343683" level="INFO">Clicks the element 'css=input.login-button'.</msg>
+<arg>css=input.login-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:09.342676" elapsed="0.935681"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2026-10-03T22:30:10.279906" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2026-10-03T22:30:10.307085" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits until the page reaches the required load state.</doc>
+<status status="PASS" start="2026-10-03T22:30:10.279906" elapsed="0.027179"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:10.310087" level="INFO">${safe_name} = login_submitted</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:10.309087" elapsed="0.001000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:10.448803" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/login_submitted.png" target="_blank"&gt;&lt;img src="screenshots/login_submitted.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:10.310087" elapsed="0.139714"/>
+</kw>
+<arg>login_submitted</arg>
+<status status="PASS" start="2026-10-03T22:30:10.308090" elapsed="0.141711"/>
+</kw>
+<arg>${email}</arg>
+<arg>${TEST_PASSWORD}</arg>
+<status status="PASS" start="2026-10-03T22:30:08.595292" elapsed="1.854509"/>
+</kw>
+<kw name="Go To" owner="Browser">
+<msg time="2026-10-03T22:30:11.125832" level="INFO">Successfully opened URL https://demowebshop.tricentis.com/customer/addresses</msg>
+<arg>${BASE_URL}/customer/addresses</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-10-03T22:30:10.450825" elapsed="0.675007"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:30:11.126832" level="INFO">Clicks the element 'text=Add new'.</msg>
+<arg>text=Add new</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:11.125832" elapsed="0.669226"/>
+</kw>
+<kw name="Fill Address Form">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:11.799033" level="INFO">Fills the text 'John' in the given field.</msg>
+<arg>id=Address_FirstName</arg>
+<arg>${FIRST_NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:11.797034" elapsed="0.051696"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:11.849731" level="INFO">Fills the text 'Tester' in the given field.</msg>
+<arg>id=Address_LastName</arg>
+<arg>${LAST_NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:11.848730" elapsed="0.013029"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:11.862760" level="INFO">Fills the text 'pawan.qa.aarpsahxoj@example.com' in the given field.</msg>
+<arg>id=Address_Email</arg>
+<arg>${REGISTERED_EMAIL}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:11.861759" elapsed="0.012029"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2026-10-03T22:30:11.875665" level="INFO">Selects the option(s) India by attribute SelectAttribute.label from element id=Address_CountryId.</msg>
+<arg>id=Address_CountryId</arg>
+<arg>label</arg>
+<arg>India</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:11.874514" elapsed="0.060360"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:11.936872" level="INFO">Fills the text 'Noida' in the given field.</msg>
+<arg>id=Address_City</arg>
+<arg>${CITY}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:11.935872" elapsed="0.014358"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:11.951229" level="INFO">Fills the text 'Sector 62' in the given field.</msg>
+<arg>id=Address_Address1</arg>
+<arg>${ADDRESS}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:11.950230" elapsed="0.018322"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:11.972533" level="INFO">Fills the text '201301' in the given field.</msg>
+<arg>id=Address_ZipPostalCode</arg>
+<arg>${ZIP_CODE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:11.968552" elapsed="0.019143"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:11.988674" level="INFO">Fills the text '9999999999' in the given field.</msg>
+<arg>id=Address_PhoneNumber</arg>
+<arg>${PHONE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:11.987695" elapsed="0.012105"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:12.000823" level="INFO">${safe_name} = address_form_filled</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:12.000823" elapsed="0.000976"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:12.143751" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/address_form_filled.png" target="_blank"&gt;&lt;img src="screenshots/address_form_filled.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:12.001799" elapsed="0.141952"/>
+</kw>
+<arg>address_form_filled</arg>
+<status status="PASS" start="2026-10-03T22:30:12.000823" elapsed="0.143928"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:30:11.796029" elapsed="0.348722"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:30:12.146775" level="INFO">Clicks the element 'css=input.save-address-button'.</msg>
+<arg>css=input.save-address-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:12.144751" elapsed="1.079522"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:30:13.257258" level="INFO">Waited for Element with selector css=.address-list .address-item at state visible</msg>
+<arg>css=.address-list .address-item</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:30:13.226282" elapsed="0.030976"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-10-03T22:30:13.287514" level="INFO">Text: ['John Tester\nJohn Tester\nEmail: pawan.qa.aarpsahxoj@example.com\nPhone number: 9999999999\nFax number:\nSector 62\nNoida, 201301\nIndia\n ']</msg>
+<msg time="2026-10-03T22:30:13.287514" level="INFO">${addresses} = John Tester
+John Tester
+Email: pawan.qa.aarpsahxoj@example.com
+Phone number: 9999999999
+Fax number:
+Sector 62
+Noida, 201301
+India
+ </msg>
+<var>${addresses}</var>
+<arg>css=.address-list</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:13.258260" elapsed="0.029254"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${addresses}</arg>
+<arg>${CITY}</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-10-03T22:30:13.288671" elapsed="0.000971"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:13.290658" level="INFO">${safe_name} = TC_DWS_045_address_added</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:13.290658" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:13.365792" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_045_address_added.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_045_address_added.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:13.291646" elapsed="0.074146"/>
+</kw>
+<arg>TC_DWS_045_address_added</arg>
+<status status="PASS" start="2026-10-03T22:30:13.289642" elapsed="0.076150"/>
+</kw>
+<kw name="Finish Test" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Step</arg>
+<arg>${TEST NAME}_failure</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-03T22:30:13.365792" elapsed="0.006888"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:13.376547" level="INFO">${safe_name} = TC_DWS_045_Add_Address_To_Customer_Account_end</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:13.375553" elapsed="0.000994"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:13.479544" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_045_Add_Address_To_Customer_Account_end.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_045_Add_Address_To_Customer_Account_end.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:13.377568" elapsed="0.102978"/>
+</kw>
+<arg>${TEST NAME}_end</arg>
+<status status="PASS" start="2026-10-03T22:30:13.372680" elapsed="0.108871"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-03T22:30:27.092741" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-03T22:30:13.482542" elapsed="13.610199"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:30:13.365792" elapsed="13.726949"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:29:57.351201" elapsed="29.741540"/>
+</test>
+<test id="s1-t6" name="TC_DWS_048 Submit Contact Us Form" line="525">
+<kw name="Open DemoWebShop" type="SETUP">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-10-03T22:30:27.104285" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots"&gt;C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots&lt;/a&gt;' already exists.</msg>
+<arg>${SCREENSHOT_DIRECTORY}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-10-03T22:30:27.104285" elapsed="0.000000"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-03T22:30:27.105280" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\d2666b02-3b99-4155-a90b-2f237a6ec2e2"}</msg>
+<msg time="2026-10-03T22:30:27.400914" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\d2666b02-3b99-4155-a90b-2f237a6ec2e2"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:30:27.104285" elapsed="0.297628"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-03T22:30:27.411449" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-03T22:30:27.431160" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-03T22:30:27.431160" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:30:27.402912" elapsed="0.028248"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-03T22:30:34.118741" level="INFO">Successfully initialized new page object and opened url: https://demowebshop.tricentis.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-03T22:30:27.432673" elapsed="6.686068"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2026-10-03T22:30:34.125205" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2026-10-03T22:30:34.132946" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits until the page reaches the required load state.</doc>
+<status status="PASS" start="2026-10-03T22:30:34.119741" elapsed="0.013205"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:34.142574" level="INFO">${safe_name} = TC_DWS_048_Submit_Contact_Us_Form_start</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:34.132946" elapsed="0.009628"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:34.998717" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_048_Submit_Contact_Us_Form_start.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_048_Submit_Contact_Us_Form_start.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:34.142574" elapsed="0.856143"/>
+</kw>
+<arg>${TEST NAME}_start</arg>
+<status status="PASS" start="2026-10-03T22:30:34.132946" elapsed="0.866756"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:30:27.103272" elapsed="7.896430"/>
+</kw>
+<kw name="Go To" owner="Browser">
+<msg time="2026-10-03T22:30:35.601601" level="INFO">Successfully opened URL https://demowebshop.tricentis.com/contactus</msg>
+<arg>${BASE_URL}/contactus</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-10-03T22:30:34.999702" elapsed="0.602897"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:35.604115" level="INFO">Fills the text 'John Tester' in the given field.</msg>
+<arg>id=FullName</arg>
+<arg>John Tester</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:35.603110" elapsed="1.672863"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:37.276972" level="INFO">Fills the text 'john@example.com' in the given field.</msg>
+<arg>id=Email</arg>
+<arg>john@example.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:37.275973" elapsed="0.256668"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-03T22:30:37.549008" level="INFO">Fills the text 'Need help with my order' in the given field.</msg>
+<arg>id=Enquiry</arg>
+<arg>Need help with my order</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:37.542880" elapsed="0.097250"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:30:37.646531" level="INFO">Clicks the element 'css=input.contact-us-button'.</msg>
+<arg>css=input.contact-us-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-03T22:30:37.643399" elapsed="0.689587"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-03T22:30:38.496230" level="INFO">Waited for Element with selector text=Your enquiry has been successfully sent to the store owner. at state visible</msg>
+<arg>text=Your enquiry has been successfully sent to the store owner.</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-03T22:30:38.363165" elapsed="0.133065"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:38.510507" level="INFO">${safe_name} = TC_DWS_048_contact_submitted</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:38.509731" elapsed="0.000776"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:38.784066" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_048_contact_submitted.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_048_contact_submitted.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:38.510507" elapsed="0.275665"/>
+</kw>
+<arg>TC_DWS_048_contact_submitted</arg>
+<status status="PASS" start="2026-10-03T22:30:38.496230" elapsed="0.290924"/>
+</kw>
+<kw name="Finish Test" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Step</arg>
+<arg>${TEST NAME}_failure</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-03T22:30:38.791072" elapsed="0.005720"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:38.800809" level="INFO">${safe_name} = TC_DWS_048_Submit_Contact_Us_Form_end</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:38.798794" elapsed="0.002015"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:39.088970" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_048_Submit_Contact_Us_Form_end.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_048_Submit_Contact_Us_Form_end.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:38.801789" elapsed="0.288222"/>
+</kw>
+<arg>${TEST NAME}_end</arg>
+<status status="PASS" start="2026-10-03T22:30:38.796792" elapsed="0.294107"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-03T22:30:40.328898" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-03T22:30:39.090899" elapsed="1.237999"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:30:38.788185" elapsed="1.540713"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:30:27.099689" elapsed="13.229209"/>
+</test>
+<test id="s1-t7" name="TC_DWS_050 Vote In Community Poll" line="547">
+<kw name="Open DemoWebShop" type="SETUP">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-10-03T22:30:40.374015" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots"&gt;C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\results\visible-check-2\screenshots&lt;/a&gt;' already exists.</msg>
+<arg>${SCREENSHOT_DIRECTORY}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-10-03T22:30:40.372872" elapsed="0.001721"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-03T22:30:40.378891" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\afaebdf1-28d7-4b96-a06d-a37fd236c7d5"}</msg>
+<msg time="2026-10-03T22:30:40.709239" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\visible-check-2\\browser\\traces\\temp\\afaebdf1-28d7-4b96-a06d-a37fd236c7d5"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:30:40.375816" elapsed="0.333423"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-03T22:30:40.713765" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-03T22:30:40.729021" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-03T22:30:40.730014" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-03T22:30:40.710237" elapsed="0.019777"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-03T22:30:47.245841" level="INFO">Successfully initialized new page object and opened url: https://demowebshop.tricentis.com</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-03T22:30:40.730014" elapsed="6.515827"/>
+</kw>
+<kw name="Wait For Load State" owner="Browser">
+<msg time="2026-10-03T22:30:47.249790" level="INFO">Waiting page load to state to receive domcontentloaded in 10000.0</msg>
+<msg time="2026-10-03T22:30:47.260596" level="INFO">Load state domcontentloaded got in 10000</msg>
+<arg>domcontentloaded</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits until the page reaches the required load state.</doc>
+<status status="PASS" start="2026-10-03T22:30:47.246860" elapsed="0.014706"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:30:47.265113" level="INFO">${safe_name} = TC_DWS_050_Vote_In_Community_Poll_start</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:30:47.264125" elapsed="0.001732"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:30:50.924693" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_050_Vote_In_Community_Poll_start.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_050_Vote_In_Community_Poll_start.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:30:47.265857" elapsed="3.658836"/>
+</kw>
+<arg>${TEST NAME}_start</arg>
+<status status="PASS" start="2026-10-03T22:30:47.261566" elapsed="3.663127"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:30:40.370239" elapsed="10.554454"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-03T22:30:50.930535" level="INFO">Clicks the element 'css=input[name='pollanswers'] &gt;&gt; nth=1'.</msg>
+<msg time="2026-10-03T22:31:03.205911" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-2.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-03T22:31:03.205911" level="INFO">See also file:///C:/Users/PAWAN/Python_project_workspace/DemoWebShop_RF_Framework/DemoWebShop_RF_Framework/results/visible-check-2/playwright-log.txt for additional details.</msg>
+<msg time="2026-10-03T22:31:03.205911" level="FAIL">TimeoutError: locator.click: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('input[name=\'pollanswers\']').nth(1)
+</msg>
+<arg>css=input[name='pollanswers'] &gt;&gt; nth=1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="FAIL" start="2026-10-03T22:30:50.924693" elapsed="12.285747">TimeoutError: locator.click: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('input[name=\'pollanswers\']').nth(1)
+</status>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>id=vote-poll-1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-10-03T22:31:03.211465" elapsed="0.000986"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>css=.poll-results</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-10-03T22:31:03.212451" elapsed="0.000999"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<var>${results}</var>
+<arg>css=.poll-results</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-10-03T22:31:03.214451" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${results}</arg>
+<arg>%</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="NOT RUN" start="2026-10-03T22:31:03.215466" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Step">
+<arg>TC_DWS_050_poll_results</arg>
+<status status="NOT RUN" start="2026-10-03T22:31:03.217466" elapsed="0.001000"/>
+</kw>
+<kw name="Finish Test" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:31:03.225385" level="INFO">${safe_name} = TC_DWS_050_Vote_In_Community_Poll_failure</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:31:03.225007" elapsed="0.000378"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:31:05.360596" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_050_Vote_In_Community_Poll_failure.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_050_Vote_In_Community_Poll_failure.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:31:03.226546" elapsed="2.135081"/>
+</kw>
+<arg>${TEST NAME}_failure</arg>
+<status status="PASS" start="2026-10-03T22:31:03.222015" elapsed="2.140612"/>
+</kw>
+<arg>Capture Step</arg>
+<arg>${TEST NAME}_failure</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-03T22:31:03.220466" elapsed="2.142161"/>
+</kw>
+<kw name="Capture Step">
+<kw name="Replace String" owner="String">
+<msg time="2026-10-03T22:31:05.365625" level="INFO">${safe_name} = TC_DWS_050_Vote_In_Community_Poll_end</msg>
+<var>${safe_name}</var>
+<arg>${step_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<status status="PASS" start="2026-10-03T22:31:05.364626" elapsed="0.001999"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-10-03T22:31:07.501509" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/TC_DWS_050_Vote_In_Community_Poll_end.png" target="_blank"&gt;&lt;img src="screenshots/TC_DWS_050_Vote_In_Community_Poll_end.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIRECTORY}${/}${safe_name}.png</arg>
+<arg>fullPage=True</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2026-10-03T22:31:05.367625" elapsed="2.134882"/>
+</kw>
+<arg>${TEST NAME}_end</arg>
+<status status="PASS" start="2026-10-03T22:31:05.363625" elapsed="2.138882"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-03T22:31:08.239463" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-03T22:31:07.502507" elapsed="0.736956"/>
+</kw>
+<status status="PASS" start="2026-10-03T22:31:03.219466" elapsed="5.020994"/>
+</kw>
+<status status="FAIL" start="2026-10-03T22:30:40.349123" elapsed="27.891337">TimeoutError: locator.click: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('input[name=\'pollanswers\']').nth(1)
+</status>
+</test>
+<doc>50 end-to-end DemoWebShop cases implemented with Robot Framework Browser.</doc>
+<status status="FAIL" start="2026-10-03T22:28:55.420803" elapsed="132.836659"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="GitHub Copilot" id="s1" pass="4" fail="3" skip="0">GitHub Copilot</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

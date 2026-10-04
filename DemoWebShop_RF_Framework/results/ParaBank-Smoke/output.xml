@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.7 on win32)" generated="2026-10-04T10:14:06.335715" rpa="false" schemaversion="5">
+<suite id="s1" name="Parabank Test Suite" source="C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\parabank_test_suite.robot">
+<test id="s1-t1" name="TC_PB_004 Forgot Login Page Shows Lookup Form" line="39">
+<kw name="Open ParaBank" owner="parabank_keywords" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-04T10:14:06.659847" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "channel": "msedge", "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\ParaBank-Smoke\\browser\\traces\\temp\\99083e41-153a-4f62-b25a-5152929ae8b1"}</msg>
+<msg time="2026-10-04T10:14:06.694236" level="INFO">Starting Browser process C:\Users\PAWAN\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:55384</msg>
+<msg time="2026-10-04T10:14:08.097771" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"channel":"msedge","chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\ParaBank-Smoke\\browser\\traces\\temp\\99083e41-153a-4f62-b25a-5152929ae8b1"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<arg>channel=msedge</arg>
+<arg>args=["--start-maximized"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-04T10:14:06.658849" elapsed="1.440934"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-04T10:14:08.108316" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-04T10:14:08.134797" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-04T10:14:08.134797" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-04T10:14:08.101893" elapsed="0.032904"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>20s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2026-10-04T10:14:08.136321" elapsed="0.004837"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-04T10:14:09.631581" level="INFO">Successfully initialized new page object and opened url: https://parabank.parasoft.com/parabank/index.htm</msg>
+<arg>${BASE_URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-04T10:14:08.142509" elapsed="1.489072"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:09.666181" level="INFO">Waited for Element with selector xpath=//input[@name='username'] at state visible</msg>
+<arg>${XPATH_HOME_USERNAME}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:09.633652" elapsed="0.032529"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:06.657850" elapsed="3.008331"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:09.671004" level="INFO">Clicks the element 'xpath=//a[contains(@href,'lookup.htm')]'.</msg>
+<arg>${XPATH_HOME_FORGOT_LINK}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:09.666181" elapsed="0.926122"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:10.646801" level="INFO">Waited for Element with selector xpath=//input[@id='firstName'] at state visible</msg>
+<arg>${XPATH_LOOKUP_FIRST_NAME}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:10.592719" elapsed="0.054082"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:10.663510" level="INFO">Waited for Element with selector xpath=//input[@id='lastName'] at state visible</msg>
+<arg>${XPATH_LOOKUP_LAST_NAME}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:10.646801" elapsed="0.016709"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:10.674748" level="INFO">Waited for Element with selector xpath=//input[@id='ssn'] at state visible</msg>
+<arg>${XPATH_LOOKUP_SSN}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:10.663510" elapsed="0.011238"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:10.676767" level="INFO">Waited for Element with selector xpath=//input[@value='Find My Login Info'] at state visible</msg>
+<arg>${XPATH_LOOKUP_BUTTON}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:10.674748" elapsed="0.002019"/>
+</kw>
+<kw name="Close ParaBank" owner="parabank_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-04T10:14:16.952831" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-04T10:14:10.688431" elapsed="6.264400"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:10.676767" elapsed="6.276064"/>
+</kw>
+<doc>Open customer lookup and verify the identity fields and find-login action are present.</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2026-10-04T10:14:06.655852" elapsed="10.296979"/>
+</test>
+<test id="s1-t2" name="TC_PB_008 Registration Rejects Mismatched Passwords" line="74">
+<kw name="Open ParaBank" owner="parabank_keywords" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-04T10:14:16.982723" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "channel": "msedge", "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\ParaBank-Smoke\\browser\\traces\\temp\\ef729cfa-0737-47fd-8850-bb04afab2e9c"}</msg>
+<msg time="2026-10-04T10:14:17.287772" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"channel":"msedge","chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\ParaBank-Smoke\\browser\\traces\\temp\\ef729cfa-0737-47fd-8850-bb04afab2e9c"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<arg>channel=msedge</arg>
+<arg>args=["--start-maximized"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-04T10:14:16.974164" elapsed="0.316115"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-04T10:14:17.295346" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-04T10:14:17.308927" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-04T10:14:17.308927" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-04T10:14:17.290779" elapsed="0.018148"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>20s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2026-10-04T10:14:17.310673" elapsed="0.001009"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-04T10:14:18.709976" level="INFO">Successfully initialized new page object and opened url: https://parabank.parasoft.com/parabank/index.htm</msg>
+<arg>${BASE_URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-04T10:14:17.311682" elapsed="1.398294"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:18.740620" level="INFO">Waited for Element with selector xpath=//input[@name='username'] at state visible</msg>
+<arg>${XPATH_HOME_USERNAME}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:18.711531" elapsed="0.029089"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:16.974164" elapsed="1.766456"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-10-04T10:14:18.740620" level="INFO">${suffix} = surcymet</msg>
+<var>${suffix}</var>
+<arg>8</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired `length` from the given `chars`.</doc>
+<status status="PASS" start="2026-10-04T10:14:18.740620" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-10-04T10:14:18.740620" level="INFO">${username} = robotqa_surcymet</msg>
+<var>${username}</var>
+<arg>${USERNAME_PREFIX}${suffix}</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-10-04T10:14:18.740620" elapsed="0.000000"/>
+</kw>
+<kw name="Open Registration Page" owner="parabank_keywords">
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:18.740620" level="INFO">Clicks the element 'xpath=//a[@href='register.htm' or contains(@href,'register.htm')]'.</msg>
+<arg>${XPATH_HOME_REGISTER_LINK}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:18.740620" elapsed="0.914485"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:19.705844" level="INFO">Waited for Element with selector xpath=//form[@id='customerForm'] at state visible</msg>
+<arg>${XPATH_REGISTER_FORM}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.655105" elapsed="0.050739"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:18.740620" elapsed="0.965224"/>
+</kw>
+<kw name="Fill Registration Form" owner="parabank_keywords">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.705844" level="INFO">Fills the text 'Robot' in the given field.</msg>
+<arg>${XPATH_REGISTER_FIRST_NAME}</arg>
+<arg>${FIRST_NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.705844" elapsed="0.025777"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.733431" level="INFO">Fills the text 'Tester' in the given field.</msg>
+<arg>${XPATH_REGISTER_LAST_NAME}</arg>
+<arg>${LAST_NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.732419" elapsed="0.019739"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.755010" level="INFO">Fills the text '100 Test Street' in the given field.</msg>
+<arg>${XPATH_REGISTER_ADDRESS}</arg>
+<arg>${ADDRESS}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.753794" elapsed="0.016101"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.769895" level="INFO">Fills the text 'Austin' in the given field.</msg>
+<arg>${XPATH_REGISTER_CITY}</arg>
+<arg>${CITY}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.769895" elapsed="0.015176"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.785071" level="INFO">Fills the text 'TX' in the given field.</msg>
+<arg>${XPATH_REGISTER_STATE}</arg>
+<arg>${STATE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.785071" elapsed="0.004758"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.801603" level="INFO">Fills the text '78701' in the given field.</msg>
+<arg>${XPATH_REGISTER_ZIP}</arg>
+<arg>${ZIP_CODE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.800894" elapsed="0.005362"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.816790" level="INFO">Fills the text '5125550100' in the given field.</msg>
+<arg>${XPATH_REGISTER_PHONE}</arg>
+<arg>${PHONE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.806256" elapsed="0.017477"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.823733" level="INFO">Fills the text '123456789' in the given field.</msg>
+<arg>${XPATH_REGISTER_SSN}</arg>
+<arg>${SSN}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.823733" elapsed="0.021326"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.845059" level="INFO">Fills the text 'robotqa_surcymet' in the given field.</msg>
+<arg>${XPATH_REGISTER_USERNAME}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.845059" elapsed="0.016129"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.863196" level="INFO">Fills the text 'ParaBank@123' in the given field.</msg>
+<arg>${XPATH_REGISTER_PASSWORD}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.861188" elapsed="0.013998"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:19.875186" level="INFO">Fills the text 'Wrong@123' in the given field.</msg>
+<arg>${XPATH_REGISTER_CONFIRM_PASSWORD}</arg>
+<arg>${confirmation}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.875186" elapsed="0.015598"/>
+</kw>
+<arg>${username}</arg>
+<arg>${TEST_PASSWORD}</arg>
+<arg>Wrong@123</arg>
+<status status="PASS" start="2026-10-04T10:14:19.705844" elapsed="0.184940"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:19.894538" level="INFO">Clicks the element 'xpath=//form[@id='customerForm']//input[@value='Register']'.</msg>
+<arg>${XPATH_REGISTER_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:19.894538" elapsed="0.452739"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:20.389998" level="INFO">Waited for Element with selector xpath=//form[@id='customerForm'] at state visible</msg>
+<arg>${XPATH_REGISTER_FORM}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:20.347277" elapsed="0.042721"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-10-04T10:14:20.429091" level="INFO">Text: ['Signing up is easy!\n\nIf you have an account with us you can sign-up for free instant online access. You will have to provide some personal information.\n\nFirst Name:\t\tFirst name is required.\nLast Name:\t\t\nAddress:\t\t\nCity:\t\t\nState:\t\t\nZip Code:\t\t\nPhone #:\t\t\nSSN:\t\t\n\xa0\nUsername:\t\t\nPassword:\t\t\nConfirm:\t\tPasswords did not match.\n\xa0\t\n\n']</msg>
+<msg time="2026-10-04T10:14:20.429091" level="INFO">${page_text} = Signing up is easy!
+
+If you have an account with us you can sign-up for free instant online access. You will have to provide some personal information.
+
+First Name:		First name is required.
+Last Name:...</msg>
+<var>${page_text}</var>
+<arg>${XPATH_RIGHT_PANEL}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:20.389998" elapsed="0.039093"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${page_text}</arg>
+<arg>Passwords did not match</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-10-04T10:14:20.429091" elapsed="0.002451"/>
+</kw>
+<kw name="Close ParaBank" owner="parabank_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-04T10:14:20.810762" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-04T10:14:20.433560" elapsed="0.377202"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:20.431542" elapsed="0.379220"/>
+</kw>
+<doc>Submit valid customer information with mismatched passwords and verify registration is rejected.</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2026-10-04T10:14:16.966894" elapsed="3.843868"/>
+</test>
+<test id="s1-t3" name="TC_PB_010 Login Accepts Registered Credentials" line="96">
+<kw name="Open ParaBank" owner="parabank_keywords" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-04T10:14:20.837202" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "channel": "msedge", "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\ParaBank-Smoke\\browser\\traces\\temp\\6d2c61e5-b77b-44e4-a2f9-40b001424169"}</msg>
+<msg time="2026-10-04T10:14:21.100752" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"channel":"msedge","chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\ParaBank-Smoke\\browser\\traces\\temp\\6d2c61e5-b77b-44e4-a2f9-40b001424169"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<arg>channel=msedge</arg>
+<arg>args=["--start-maximized"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-04T10:14:20.830291" elapsed="0.270461"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-04T10:14:21.104505" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-04T10:14:21.117906" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-04T10:14:21.117906" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-04T10:14:21.102498" elapsed="0.015408"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>20s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2026-10-04T10:14:21.117906" elapsed="0.002008"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-04T10:14:22.954643" level="INFO">Successfully initialized new page object and opened url: https://parabank.parasoft.com/parabank/index.htm</msg>
+<arg>${BASE_URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-04T10:14:21.120929" elapsed="1.834433"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:22.989053" level="INFO">Waited for Element with selector xpath=//input[@name='username'] at state visible</msg>
+<arg>${XPATH_HOME_USERNAME}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:22.955362" elapsed="0.033691"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:20.830291" elapsed="2.158762"/>
+</kw>
+<kw name="Ensure Test Customer" owner="parabank_keywords">
+<if>
+<branch type="IF" condition="$PARABANK_TEST_USERNAME == ''">
+<kw name="Register New Test Customer" owner="parabank_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2026-10-04T10:14:22.991882" level="INFO">${suffix} = velommloxj</msg>
+<var>${suffix}</var>
+<arg>10</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired `length` from the given `chars`.</doc>
+<status status="PASS" start="2026-10-04T10:14:22.989053" elapsed="0.002829"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-10-04T10:14:22.991882" level="INFO">${username} = robotqa_velommloxj</msg>
+<var>${username}</var>
+<arg>${USERNAME_PREFIX}${suffix}</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-10-04T10:14:22.991882" elapsed="0.000000"/>
+</kw>
+<kw name="Open Registration Page" owner="parabank_keywords">
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:22.991882" level="INFO">Clicks the element 'xpath=//a[@href='register.htm' or contains(@href,'register.htm')]'.</msg>
+<arg>${XPATH_HOME_REGISTER_LINK}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:22.991882" elapsed="0.856850"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:23.911069" level="INFO">Waited for Element with selector xpath=//form[@id='customerForm'] at state visible</msg>
+<arg>${XPATH_REGISTER_FORM}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:23.848732" elapsed="0.062337"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:22.991882" elapsed="0.919187"/>
+</kw>
+<kw name="Fill Registration Form" owner="parabank_keywords">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:23.914098" level="INFO">Fills the text 'Robot' in the given field.</msg>
+<arg>${XPATH_REGISTER_FIRST_NAME}</arg>
+<arg>${FIRST_NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:23.911069" elapsed="0.015827"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:23.935752" level="INFO">Fills the text 'Tester' in the given field.</msg>
+<arg>${XPATH_REGISTER_LAST_NAME}</arg>
+<arg>${LAST_NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:23.926896" elapsed="0.018466"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:23.945362" level="INFO">Fills the text '100 Test Street' in the given field.</msg>
+<arg>${XPATH_REGISTER_ADDRESS}</arg>
+<arg>${ADDRESS}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:23.945362" elapsed="0.011596"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:23.956958" level="INFO">Fills the text 'Austin' in the given field.</msg>
+<arg>${XPATH_REGISTER_CITY}</arg>
+<arg>${CITY}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:23.956958" elapsed="0.016053"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:23.973011" level="INFO">Fills the text 'TX' in the given field.</msg>
+<arg>${XPATH_REGISTER_STATE}</arg>
+<arg>${STATE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:23.973011" elapsed="0.017109"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:23.990120" level="INFO">Fills the text '78701' in the given field.</msg>
+<arg>${XPATH_REGISTER_ZIP}</arg>
+<arg>${ZIP_CODE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:23.990120" elapsed="0.008683"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:24.004854" level="INFO">Fills the text '5125550100' in the given field.</msg>
+<arg>${XPATH_REGISTER_PHONE}</arg>
+<arg>${PHONE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:23.998803" elapsed="0.015870"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:24.014673" level="INFO">Fills the text '123456789' in the given field.</msg>
+<arg>${XPATH_REGISTER_SSN}</arg>
+<arg>${SSN}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:24.014673" elapsed="0.018816"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:24.033489" level="INFO">Fills the text 'robotqa_velommloxj' in the given field.</msg>
+<arg>${XPATH_REGISTER_USERNAME}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:24.033489" elapsed="0.012297"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:24.045786" level="INFO">Fills the text 'ParaBank@123' in the given field.</msg>
+<arg>${XPATH_REGISTER_PASSWORD}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:24.045786" elapsed="0.022861"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:24.068647" level="INFO">Fills the text 'ParaBank@123' in the given field.</msg>
+<arg>${XPATH_REGISTER_CONFIRM_PASSWORD}</arg>
+<arg>${confirmation}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:24.068647" elapsed="0.011147"/>
+</kw>
+<arg>${username}</arg>
+<arg>${TEST_PASSWORD}</arg>
+<arg>${TEST_PASSWORD}</arg>
+<status status="PASS" start="2026-10-04T10:14:23.911069" elapsed="0.168725"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:24.081354" level="INFO">Clicks the element 'xpath=//form[@id='customerForm']//input[@value='Register']'.</msg>
+<arg>${XPATH_REGISTER_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:24.081354" elapsed="0.414187"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:24.539628" level="INFO">Waited for Element with selector xpath=//div[@id='leftPanel']//a[normalize-space()='Accounts Overview'] at state visible</msg>
+<arg>${XPATH_NAV_OVERVIEW}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:24.495541" elapsed="0.044087"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-10-04T10:14:24.543177" level="INFO">${PARABANK_TEST_USERNAME} = robotqa_velommloxj</msg>
+<arg>${PARABANK_TEST_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Makes the variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-10-04T10:14:24.539628" elapsed="0.003549"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-10-04T10:14:24.544690" level="INFO">${PARABANK_TEST_PASSWORD} = ParaBank@123</msg>
+<arg>${PARABANK_TEST_PASSWORD}</arg>
+<arg>${TEST_PASSWORD}</arg>
+<doc>Makes the variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-10-04T10:14:24.543177" elapsed="0.001513"/>
+</kw>
+<return>
+<value>${username}</value>
+<status status="PASS" start="2026-10-04T10:14:24.544690" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-10-04T10:14:22.989053" elapsed="1.555637"/>
+</kw>
+<kw name="Logout ParaBank" owner="parabank_keywords">
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:24.544690" level="INFO">Clicks the element 'xpath=//div[@id='leftPanel']//a[normalize-space()='Log Out']'.</msg>
+<arg>${XPATH_NAV_LOGOUT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:24.544690" elapsed="1.041190"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:25.608396" level="INFO">Waited for Element with selector xpath=//input[@name='username'] at state visible</msg>
+<arg>${XPATH_HOME_USERNAME}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:25.587427" elapsed="0.020969"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:24.544690" elapsed="1.063706"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:22.989053" elapsed="2.619343"/>
+</branch>
+<status status="PASS" start="2026-10-04T10:14:22.989053" elapsed="2.619343"/>
+</if>
+<return>
+<value>${PARABANK_TEST_USERNAME}</value>
+<status status="PASS" start="2026-10-04T10:14:25.608396" elapsed="0.000000"/>
+</return>
+<msg time="2026-10-04T10:14:25.608396" level="INFO">${username} = robotqa_velommloxj</msg>
+<var>${username}</var>
+<status status="PASS" start="2026-10-04T10:14:22.989053" elapsed="2.619343"/>
+</kw>
+<kw name="Login With Credentials" owner="parabank_keywords">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:25.608396" level="INFO">Fills the text 'robotqa_velommloxj' in the given field.</msg>
+<arg>${XPATH_HOME_USERNAME}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:25.608396" elapsed="0.021444"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:25.629840" level="INFO">Fills the text 'ParaBank@123' in the given field.</msg>
+<arg>${XPATH_HOME_PASSWORD}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:25.629840" elapsed="0.011450"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:25.641290" level="INFO">Clicks the element 'xpath=//input[@value='Log In']'.</msg>
+<arg>${XPATH_HOME_LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:25.641290" elapsed="0.918909"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:26.608281" level="INFO">Waited for Element with selector xpath=//div[@id='leftPanel']//a[normalize-space()='Accounts Overview'] at state visible</msg>
+<arg>${XPATH_NAV_OVERVIEW}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:26.560199" elapsed="0.048082"/>
+</kw>
+<arg>${username}</arg>
+<arg>${PARABANK_TEST_PASSWORD}</arg>
+<status status="PASS" start="2026-10-04T10:14:25.608396" elapsed="0.999885"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:26.620071" level="INFO">Waited for Element with selector xpath=//div[@id='leftPanel']//a[normalize-space()='Accounts Overview'] at state visible</msg>
+<arg>${XPATH_NAV_OVERVIEW}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:26.608281" elapsed="0.011790"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:26.628309" level="INFO">Waited for Element with selector xpath=//div[@id='leftPanel']//a[normalize-space()='Log Out'] at state visible</msg>
+<arg>${XPATH_NAV_LOGOUT}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:26.620071" elapsed="0.008238"/>
+</kw>
+<kw name="Close ParaBank" owner="parabank_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-04T10:14:26.976524" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-04T10:14:26.628309" elapsed="0.348215"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:26.628309" elapsed="0.348215"/>
+</kw>
+<doc>Authenticate with the customer created by this suite and verify account navigation is available.</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2026-10-04T10:14:20.824242" elapsed="6.152282"/>
+</test>
+<test id="s1-t4" name="TC_PB_013 Open A New Savings Account" line="120">
+<kw name="Open ParaBank" owner="parabank_keywords" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-04T10:14:26.992612" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "channel": "msedge", "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\ParaBank-Smoke\\browser\\traces\\temp\\5c4d9c6c-410f-444d-a85b-1a3c372c1be8"}</msg>
+<msg time="2026-10-04T10:14:27.260192" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"channel":"msedge","chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\ParaBank-Smoke\\browser\\traces\\temp\\5c4d9c6c-410f-444d-a85b-1a3c372c1be8"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<arg>channel=msedge</arg>
+<arg>args=["--start-maximized"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-04T10:14:26.992612" elapsed="0.267580"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-04T10:14:27.264542" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-04T10:14:27.280572" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-04T10:14:27.280572" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-04T10:14:27.260192" elapsed="0.020380"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>20s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2026-10-04T10:14:27.282409" elapsed="0.000852"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-04T10:14:28.656737" level="INFO">Successfully initialized new page object and opened url: https://parabank.parasoft.com/parabank/index.htm</msg>
+<arg>${BASE_URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-04T10:14:27.283261" elapsed="1.373476"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:28.688003" level="INFO">Waited for Element with selector xpath=//input[@name='username'] at state visible</msg>
+<arg>${XPATH_HOME_USERNAME}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:28.656737" elapsed="0.031266"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:26.992612" elapsed="1.695391"/>
+</kw>
+<kw name="Login As Test Customer" owner="parabank_keywords">
+<kw name="Ensure Test Customer" owner="parabank_keywords">
+<if>
+<branch type="IF" condition="$PARABANK_TEST_USERNAME == ''">
+<kw name="Register New Test Customer" owner="parabank_keywords">
+<status status="NOT RUN" start="2026-10-04T10:14:28.688003" elapsed="0.000000"/>
+</kw>
+<kw name="Logout ParaBank" owner="parabank_keywords">
+<status status="NOT RUN" start="2026-10-04T10:14:28.688003" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-10-04T10:14:28.688003" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-10-04T10:14:28.688003" elapsed="0.000000"/>
+</if>
+<return>
+<value>${PARABANK_TEST_USERNAME}</value>
+<status status="PASS" start="2026-10-04T10:14:28.688003" elapsed="0.000000"/>
+</return>
+<msg time="2026-10-04T10:14:28.697252" level="INFO">${username} = robotqa_velommloxj</msg>
+<var>${username}</var>
+<status status="PASS" start="2026-10-04T10:14:28.688003" elapsed="0.009249"/>
+</kw>
+<kw name="Login With Credentials" owner="parabank_keywords">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:28.699558" level="INFO">Fills the text 'robotqa_velommloxj' in the given field.</msg>
+<arg>${XPATH_HOME_USERNAME}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:28.698830" elapsed="0.014001"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:28.712831" level="INFO">Fills the text 'ParaBank@123' in the given field.</msg>
+<arg>${XPATH_HOME_PASSWORD}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:28.712831" elapsed="0.027610"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:28.740941" level="INFO">Clicks the element 'xpath=//input[@value='Log In']'.</msg>
+<arg>${XPATH_HOME_LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:28.740941" elapsed="0.719248"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:29.695077" level="INFO">Waited for Element with selector xpath=//div[@id='leftPanel']//a[normalize-space()='Accounts Overview'] at state visible</msg>
+<arg>${XPATH_NAV_OVERVIEW}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:29.460189" elapsed="0.234888"/>
+</kw>
+<arg>${username}</arg>
+<arg>${PARABANK_TEST_PASSWORD}</arg>
+<status status="PASS" start="2026-10-04T10:14:28.697252" elapsed="0.997825"/>
+</kw>
+<return>
+<value>${username}</value>
+<status status="PASS" start="2026-10-04T10:14:29.695077" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-10-04T10:14:28.688003" elapsed="1.007074"/>
+</kw>
+<kw name="Open Extra Account" owner="parabank_keywords">
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:29.695077" level="INFO">Clicks the element 'xpath=//div[@id='leftPanel']//a[normalize-space()='Open New Account']'.</msg>
+<arg>${XPATH_NAV_OPEN_ACCOUNT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:29.695077" elapsed="0.408991"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:30.134394" level="INFO">Waited for Element with selector xpath=//select[@id='type'] at state visible</msg>
+<arg>${XPATH_OPEN_ACCOUNT_TYPE}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:30.104576" elapsed="0.033029"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2026-10-04T10:14:30.138546" level="INFO">Selects the option(s) SAVINGS by attribute SelectAttribute.label from element xpath=//select[@id='type'].</msg>
+<arg>${XPATH_OPEN_ACCOUNT_TYPE}</arg>
+<arg>label</arg>
+<arg>${account_type}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:30.138238" elapsed="0.041056"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2026-10-04T10:14:30.179294" level="INFO">Selects the option(s) 0 by attribute SelectAttribute.index from element xpath=//select[@id='fromAccountId'].</msg>
+<arg>${XPATH_OPEN_ACCOUNT_FROM}</arg>
+<arg>index</arg>
+<arg>0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:30.179294" elapsed="0.795781"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:30.975075" level="INFO">Clicks the element 'xpath=//input[@value='Open New Account']'.</msg>
+<arg>${XPATH_OPEN_ACCOUNT_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:30.975075" elapsed="0.041865"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:31.842892" level="INFO">Waited for Element with selector xpath=//a[@id='newAccountId'] at state visible</msg>
+<arg>${XPATH_NEW_ACCOUNT_ID}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:31.016940" elapsed="0.825952"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-10-04T10:14:31.867803" level="INFO">Text: ['20115']</msg>
+<msg time="2026-10-04T10:14:31.867803" level="INFO">${account_id} = 20115</msg>
+<var>${account_id}</var>
+<arg>${XPATH_NEW_ACCOUNT_ID}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:31.842892" elapsed="0.024911"/>
+</kw>
+<return>
+<value>${account_id}</value>
+<status status="PASS" start="2026-10-04T10:14:31.867803" elapsed="0.000000"/>
+</return>
+<msg time="2026-10-04T10:14:31.867803" level="INFO">${account_id} = 20115</msg>
+<var>${account_id}</var>
+<arg>SAVINGS</arg>
+<status status="PASS" start="2026-10-04T10:14:29.695077" elapsed="2.172726"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-10-04T10:14:31.867803" level="INFO">Length is 5.</msg>
+<arg>${account_id}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-10-04T10:14:31.867803" elapsed="0.000000"/>
+</kw>
+<kw name="Open Account Overview" owner="parabank_keywords">
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:31.873306" level="INFO">Clicks the element 'xpath=//div[@id='leftPanel']//a[normalize-space()='Accounts Overview']'.</msg>
+<arg>${XPATH_NAV_OVERVIEW}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:31.867803" elapsed="0.380410"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:32.306870" level="INFO">Waited for Element with selector xpath=//table[@id='accountTable'] at state visible</msg>
+<arg>${XPATH_ACCOUNT_TABLE}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:32.278394" elapsed="0.028476"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:31.867803" elapsed="0.439067"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:32.321481" level="INFO">Waited for Element with selector xpath=//table[@id='accountTable'] at state visible</msg>
+<arg>${XPATH_ACCOUNT_TABLE}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:32.306870" elapsed="0.014611"/>
+</kw>
+<kw name="Close ParaBank" owner="parabank_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-04T10:14:32.729020" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-04T10:14:32.321481" elapsed="0.407539"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:32.321481" elapsed="0.407539"/>
+</kw>
+<doc>Open a savings account from the existing customer account and verify an account number is returned.</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2026-10-04T10:14:26.988193" elapsed="5.740827"/>
+</test>
+<test id="s1-t5" name="TC_PB_018 Bill Payment Requires Payee Details" line="171">
+<kw name="Open ParaBank" owner="parabank_keywords" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-10-04T10:14:32.744940" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "channel": "msedge", "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\ParaBank-Smoke\\browser\\traces\\temp\\a2647c83-5401-4dcf-9492-ec27601394b1"}</msg>
+<msg time="2026-10-04T10:14:33.051705" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"channel":"msedge","chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\PAWAN\\Python_project_workspace\\DemoWebShop_RF_Framework\\DemoWebShop_RF_Framework\\results\\ParaBank-Smoke\\browser\\traces\\temp\\a2647c83-5401-4dcf-9492-ec27601394b1"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<arg>channel=msedge</arg>
+<arg>args=["--start-maximized"]</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-10-04T10:14:32.744940" elapsed="0.306765"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-10-04T10:14:33.057908" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-10-04T10:14:33.071983" level="INFO">Successfully created context. </msg>
+<msg time="2026-10-04T10:14:33.071983" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-10-04T10:14:33.053714" elapsed="0.018269"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>20s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2026-10-04T10:14:33.071983" elapsed="0.001932"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-10-04T10:14:35.119327" level="INFO">Successfully initialized new page object and opened url: https://parabank.parasoft.com/parabank/index.htm</msg>
+<arg>${BASE_URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-10-04T10:14:33.073915" elapsed="2.045412"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:35.149209" level="INFO">Waited for Element with selector xpath=//input[@name='username'] at state visible</msg>
+<arg>${XPATH_HOME_USERNAME}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:35.119327" elapsed="0.029882"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:32.744940" elapsed="2.404269"/>
+</kw>
+<kw name="Login As Test Customer" owner="parabank_keywords">
+<kw name="Ensure Test Customer" owner="parabank_keywords">
+<if>
+<branch type="IF" condition="$PARABANK_TEST_USERNAME == ''">
+<kw name="Register New Test Customer" owner="parabank_keywords">
+<status status="NOT RUN" start="2026-10-04T10:14:35.154539" elapsed="0.000000"/>
+</kw>
+<kw name="Logout ParaBank" owner="parabank_keywords">
+<status status="NOT RUN" start="2026-10-04T10:14:35.154539" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-10-04T10:14:35.154539" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-10-04T10:14:35.154539" elapsed="0.000000"/>
+</if>
+<return>
+<value>${PARABANK_TEST_USERNAME}</value>
+<status status="PASS" start="2026-10-04T10:14:35.154539" elapsed="0.000000"/>
+</return>
+<msg time="2026-10-04T10:14:35.154539" level="INFO">${username} = robotqa_velommloxj</msg>
+<var>${username}</var>
+<status status="PASS" start="2026-10-04T10:14:35.149209" elapsed="0.005330"/>
+</kw>
+<kw name="Login With Credentials" owner="parabank_keywords">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:35.154539" level="INFO">Fills the text 'robotqa_velommloxj' in the given field.</msg>
+<arg>${XPATH_HOME_USERNAME}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:35.154539" elapsed="0.034517"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-10-04T10:14:35.190900" level="INFO">Fills the text 'ParaBank@123' in the given field.</msg>
+<arg>${XPATH_HOME_PASSWORD}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:35.190054" elapsed="0.016766"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:35.206820" level="INFO">Clicks the element 'xpath=//input[@value='Log In']'.</msg>
+<arg>${XPATH_HOME_LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:35.206820" elapsed="0.704697"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:35.984226" level="INFO">Waited for Element with selector xpath=//div[@id='leftPanel']//a[normalize-space()='Accounts Overview'] at state visible</msg>
+<arg>${XPATH_NAV_OVERVIEW}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:35.911517" elapsed="0.074217"/>
+</kw>
+<arg>${username}</arg>
+<arg>${PARABANK_TEST_PASSWORD}</arg>
+<status status="PASS" start="2026-10-04T10:14:35.154539" elapsed="0.831195"/>
+</kw>
+<return>
+<value>${username}</value>
+<status status="PASS" start="2026-10-04T10:14:35.985734" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-10-04T10:14:35.149209" elapsed="0.836525"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:35.988012" level="INFO">Clicks the element 'xpath=//div[@id='leftPanel']//a[normalize-space()='Bill Pay']'.</msg>
+<arg>${XPATH_NAV_BILL_PAY}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:35.985734" elapsed="0.381873"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-10-04T10:14:36.371540" level="INFO">Clicks the element 'xpath=//input[@value='Send Payment']'.</msg>
+<arg>${XPATH_BILL_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:36.369632" elapsed="0.072034"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-10-04T10:14:36.441666" level="INFO">Waited for Element with selector xpath=//input[@name='payee.name'] at state visible</msg>
+<arg>${XPATH_BILL_NAME}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-10-04T10:14:36.441666" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-10-04T10:14:36.488230" level="INFO">Text: ['Bill Payment Service\n\nEnter payee information\n\nPayee Name:\t\tPayee name is required.\nAddress:\t\tAddress is required.\nCity:\t\tCity is required.\nState:\t\tState is required.\nZip Code:\t\tZip Code is required.\nPhone #:\t\tPhone number is required.\n\xa0\nAccount #:\t\tAccount number is required.\nVerify Account #:\t\tAccount number is required.\n\xa0\nAmount: $\t\tThe amount cannot be empty.\n\xa0\nFrom account #:\t\n20004\n20115\n\n\xa0\t']</msg>
+<msg time="2026-10-04T10:14:36.488230" level="INFO">${page_text} = Bill Payment Service
+
+Enter payee information
+
+Payee Name:		Payee name is required.
+Address:		Address is required.
+City:		City is required.
+State:		State is required.
+Zip Code:		Zip Code is required.
+...</msg>
+<var>${page_text}</var>
+<arg>${XPATH_RIGHT_PANEL}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-10-04T10:14:36.454893" elapsed="0.033337"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${page_text}</arg>
+<arg>Bill Payment Complete</arg>
+<doc>Fails if the `container` contains the `item`.</doc>
+<status status="PASS" start="2026-10-04T10:14:36.488230" elapsed="0.000000"/>
+</kw>
+<kw name="Close ParaBank" owner="parabank_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-10-04T10:14:36.860308" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-04T10:14:36.488230" elapsed="0.372078"/>
+</kw>
+<status status="PASS" start="2026-10-04T10:14:36.488230" elapsed="0.372078"/>
+</kw>
+<doc>Submit an empty bill payment and verify the form remains visible for correction.</doc>
+<tag>Smoke</tag>
+<status status="PASS" start="2026-10-04T10:14:32.729020" elapsed="4.131288"/>
+</test>
+<doc>25 XPath-only end-to-end tests for the ParaBank public demo application.</doc>
+<status status="PASS" start="2026-10-04T10:14:06.338716" elapsed="30.531185"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat name="Parabank Test Suite" id="s1" pass="5" fail="0" skip="0">Parabank Test Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

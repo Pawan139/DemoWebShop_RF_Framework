@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.7 on win32)" generated="2026-10-03T21:14:03.922508" rpa="false" schemaversion="5">
+<suite id="s1" name="Pull-Request-New Brach" source="C:\Users\PAWAN\Python_project_workspace\DemoWebShop_RF_Framework\DemoWebShop_RF_Framework\tests\pull-request-new brach.robot">
+<kw name="Open SauceDemo" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-10-03T21:14:04.306402" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-10-03T21:14:04.306402" elapsed="0.000982"/>
+</kw>
+<status status="PASS" start="2026-10-03T21:14:04.305379" elapsed="0.004004"/>
+</kw>
+<test id="s1-t1" name="Login Successfully With Valid User" line="14">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-03T21:14:04.310383" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-03T21:14:04.310383" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-03T21:14:04.310383" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://span[@class='title' and normalize-space()='Products']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-03T21:14:04.310383" elapsed="0.001016"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>xpath://span[@class='title']</arg>
+<arg>Products</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-03T21:14:04.311399" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-10-03T21:14:04.309383" elapsed="0.002016"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" start="2026-10-03T21:14:04.312383" elapsed="0.000000"/>
+</kw>
+<doc>Logs in to SauceDemo with its standard valid demo account.</doc>
+<status status="PASS" start="2026-10-03T21:14:03.924522" elapsed="0.387861"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Pull-Request-New Brach" id="s1" pass="1" fail="0" skip="0">Pull-Request-New Brach</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
